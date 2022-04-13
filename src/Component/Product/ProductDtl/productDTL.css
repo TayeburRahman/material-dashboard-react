@@ -1,0 +1,28 @@
+.cart-icon {
+  font-size: 40px;
+}
+.plan-details {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  font-size: 25px;
+  border: 2px solid rgb(165, 163, 42);
+  border-radius: 3px;
+  background-color: rgb(230, 230, 230);
+  cursor: pointer;
+}
+.radio:checked ~ .plan-details {
+  border-color: var(--color-green);
+  background: none;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(146, 167, 9);
+  background-color: rgb(19, 13, 14);
+  border-radius: 3px;
+}
+
+.width20 {
+  width: 20%;
+}
+.Rating {
+  color: rgb(158, 153, 9);
+}
