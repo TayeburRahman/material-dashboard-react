@@ -166,8 +166,7 @@ export default function App() {
           {configsButton}
           {layout === "vr" && <Configurator />}
           <Routes>
-          {getRoutes(routes)}
- 
+          {getRoutes(routes)} 
                 <Route path="/dashboard" element={<Navigate />} />
           </Routes>
            </PrivateRoute>
