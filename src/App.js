@@ -153,7 +153,8 @@ export default function App() {
         <CssBaseline />
         {layout === "dashboard" && (
         <>
-          <Sidenav
+           <PrivateRoute>
+           <Sidenav
             color={sidenavColor}
             brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
             brandName="Material Dashboard 2"
@@ -166,8 +167,10 @@ export default function App() {
           {layout === "vr" && <Configurator />}
           <Routes>
           {getRoutes(routes)}
-         <Route path="/dashboard" element={<Navigate to="/dashboard" />} />
-         </Routes>
+ 
+                <Route path="/dashboard" element={<Navigate />} />
+          </Routes>
+           </PrivateRoute>
         </>
       )}
        </ThemeProvider>

@@ -2,7 +2,6 @@
 import PropTypes from "prop-types";
 import { createContext, useContext, useMemo, useReducer } from "react";
 
-
 // Material Dashboard 2 React main context
 const MaterialUI = createContext();
 

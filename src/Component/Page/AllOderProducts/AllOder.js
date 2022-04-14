@@ -1,26 +1,25 @@
-import React, { useEffect, useState } from "react";
-import useAuth from "../../../Firebase/Hooks/useAuth";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import Avatar from "@mui/material/Avatar";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
-import Button from "@mui/material/Button";
+import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import useAuth from "../../../Firebase/Hooks/useAuth";
 
 const AllOder = () => {
   const { user } = useAuth();
   const email = user.email;
   const [Products, setProduct] = useState([{}]);
   const [isDelete, setIsDelete] = useState(false);
-  console.log(Products);
+  console.log("Products", Products);
 
   useEffect(() => {
-    fetch(`https://pacific-escarpment-27904.herokuapp.com/userOder/${email}`)
+    fetch("https://pacific-escarpment-27904.herokuapp.com/allOder")
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [email, isDelete]);
@@ -54,26 +53,11 @@ const AllOder = () => {
     });
   };
   return (
-    <div className="p-5"> 
-    <h4 className="dashboardTextColor"
-    style={{color: 'rgb(199 23 23)',
-      fontFamily: 'monospace'}}
-    >Wishlist</h4>
+    <div className=""> 
+      
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          <TableHead>
-            <TableRow
-            style={{color: "dimgray", fontFamily:'monospace'}}
-            >
-              <TableCell align="right"> </TableCell>
-              <TableCell align="right"
-              style={{fontFamily:'sans-serif'}}
-              >PRODUCT NAME</TableCell>
-              <TableCell align="right" style={{fontFamily:'sans-serif'}}>PRICE</TableCell>
-              <TableCell align="right" style={{fontFamily:'sans-serif'}}>ORDERS</TableCell>
-              <TableCell align="right" style={{fontFamily:'sans-serif'}}>DELETE YOUR PRODUCT </TableCell>
-            </TableRow>
-          </TableHead>
+        
           <TableBody>
             {Products.map((product) => (
               <TableRow
@@ -86,28 +70,28 @@ const AllOder = () => {
                     <Avatar alt="Remy Sharp" src={product.url} />
                   </ListItemAvatar>
                 </TableCell>
-                <TableCell align="right" 
+                <TableCell  
                 component="th" 
                 scope="row"
-                style={{color:'indianred',fontFamily:'monospace'}}
+                style={{color:'#3e435c',fontWeight:"600"}}
                 >
                   {product.name}
                 </TableCell>
 
-                <TableCell align="right"
-                style={{fontFamily:'monospace',color:'darkolivegreen'}}
+                <TableCell 
+                style={{color:'darkolivegreen',fontWeight:"600"}}
                 >{product.price}</TableCell>
-                <TableCell align="right"
+                <TableCell 
                 style={{fontFamily:'monospace', color:'darkolivegreen'}}
                 >{product.state}</TableCell>
-                <TableCell align="right"
+                <TableCell  
                 style={{fontFamily:'monospace'}}
                 >
                   <Button
                     onClick={() => handleDeleteOrders(product._id)}
                     variant="outlined"
                     color="error"
-                    style={{fontFamily:'system-ui',color:'darkolivegreen'}}
+                    style={{fontFamily:'system-ui',color:'red'}}
                   >
                     Delete
                   </Button>

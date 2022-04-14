@@ -8,9 +8,10 @@ const AdminRoute = ({ children, ...rest }) => {
   let location = useLocation();
   if (isLoading) {
     return <CircularProgress color="success" />;
+    
   }
 
-  if (user.email) {
+  if (user.email && admin) {
     return children;
 
   }
