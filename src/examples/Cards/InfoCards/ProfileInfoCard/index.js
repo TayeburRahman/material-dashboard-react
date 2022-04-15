@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Watch Selling App React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-react
@@ -14,24 +14,24 @@ Coded by www.creative-tim.com
 */
 
 // react-routers components
-import { Link } from "react-router-dom";
-
-// prop-types is library for typechecking of props
-import PropTypes from "prop-types";
-
 // @mui material components
 import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider";
-import Tooltip from "@mui/material/Tooltip";
 import Icon from "@mui/material/Icon";
-
-// Material Dashboard 2 React components
-import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-
-// Material Dashboard 2 React base styles
+import Tooltip from "@mui/material/Tooltip";
+// Watch Selling App React base styles
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
+// Watch Selling App React components
+import MDBox from "components/MDBox";
+import MDTypography from "components/MDTypography";
+// prop-types is library for typechecking of props
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+
+
+
+
 
 function ProfileInfoCard({ title, description, info, social, action, shadow }) {
   const labels = [];

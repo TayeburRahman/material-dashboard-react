@@ -6,21 +6,16 @@ import brandDark from "assets/images/logo-ct-dark.png";
 // Images
 import brandWhite from "assets/images/logo-ct.png";
 import theme from "assets/theme";
-// Material Dashboard 2 React Dark Mode themes
 import themeDark from "assets/theme-dark";
-// Material Dashboard 2 React components
 import MDBox from "components/MDBox";
-// Material Dashboard 2 React contexts
 import { setMiniSidenav, setOpenConfigurator, useMaterialUIController } from "context";
 import Configurator from "examples/Configurator";
-// Material Dashboard 2 React example components
 import Sidenav from "examples/Sidenav";
 import AuthProvider from "Firebase/Context/AuthProvider";
 import PrivateRoute from "PrivateRoute/PrivateRoute";
 import { useEffect, useState } from "react";
 // react-router components
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-// Material Dashboard 2 React routes
 import routes from "routes";
 import AboutUs from './Component/Page/About/AboutUs';
 import AllProduct from './Component/Page/AllProduct/AllProduct';
@@ -31,14 +26,6 @@ import ProductCalection from './Component/Page/ProductCalection';
 import Spping from './Component/Page/Spping/Spping';
 import Login from './Component/UserLogin/Login';
 import Register from './Component/UserLogin/Register';
- 
-
-
-
-
-
-
-
 
 
 export default function App() {
@@ -92,11 +79,9 @@ export default function App() {
       if (route.collapse) {
         return getRoutes(route.collapse);
       }
-
       if (route.route) {
         return <Route exact path={route.route} element={route.component} key={route.key} />;
       }
-
       return null;
     });
 
@@ -157,7 +142,7 @@ export default function App() {
            <Sidenav
             color={sidenavColor}
             brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-            brandName="Material Dashboard 2"
+            brandName="Watch Selling App"
             routes={routes}
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}

@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Watch Selling App React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-react
@@ -14,16 +14,16 @@ Coded by www.creative-tim.com
 */
 
 /**
- * The base typography styles for the Material Dashboard 2 PRO React.
+ * The base typography styles for the Watch Selling App PRO React.
  * You can add new typography style using this file.
- * You can customized the typography styles for the entire Material Dashboard 2 PRO React using thie file.
+ * You can customized the typography styles for the entire Watch Selling App PRO React using thie file.
  */
 
-// Material Dashboard 2 React Base Styles
+// Watch Selling App React Base Styles
 import colors from "assets/theme-dark/base/colors";
-
-// Material Dashboard 2 React Helper Functions
+// Watch Selling App React Helper Functions
 import pxToRem from "assets/theme-dark/functions/pxToRem";
+
 
 const { white } = colors;
 

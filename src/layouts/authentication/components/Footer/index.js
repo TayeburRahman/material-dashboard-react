@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Watch Selling App React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-react
@@ -14,19 +14,19 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
-
 // @mui material components
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
 import Icon from "@mui/material/Icon";
-
-// Material Dashboard 2 React components
+import Link from "@mui/material/Link";
+// Watch Selling App React base styles
+import typography from "assets/theme/base/typography";
+// Watch Selling App React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
+import PropTypes from "prop-types";
 
-// Material Dashboard 2 React base styles
-import typography from "assets/theme/base/typography";
+
+
 
 function Footer({ light }) {
   const { size } = typography;

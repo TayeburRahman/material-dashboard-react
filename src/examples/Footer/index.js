@@ -2,9 +2,9 @@
 import Icon from "@mui/material/Icon";
 // @mui material components
 import Link from "@mui/material/Link";
-// Material Dashboard 2 React base styles
+// Watch Selling App React base styles
 import typography from "assets/theme/base/typography";
-// Material Dashboard 2 React components
+// Watch Selling App React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import PropTypes from "prop-types";
@@ -83,12 +83,11 @@ function Footer({ company, links }) {
 
 // Setting default values for the props of Footer
 Footer.defaultProps = {
-  company: { href: "https://www.creative-tim.com/", name: "Creative Tim" },
+  company: {href: "/aLLProduct", name: "Category"},
   links: [
-    { href: "https://www.creative-tim.com/", name: "Creative Tim" },
-    { href: "https://www.creative-tim.com/presentation", name: "About Us" },
-    { href: "https://www.creative-tim.com/blog", name: "Blog" },
-    { href: "https://www.creative-tim.com/license", name: "License" },
+    { href: "/aLLProduct", name: "Category" },
+    { href: "/aboutUs", name: "About Us" },
+    { href: "/home", name: "Home" }, 
   ],
 };
 

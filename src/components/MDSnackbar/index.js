@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Watch Selling App React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-react
@@ -14,24 +14,24 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
-
-// @mui material components
-import Snackbar from "@mui/material/Snackbar";
-import IconButton from "@mui/material/IconButton";
-import Icon from "@mui/material/Icon";
 import Divider from "@mui/material/Divider";
 import Fade from "@mui/material/Fade";
-
-// Material Dashboard 2 React components
+import Icon from "@mui/material/Icon";
+import IconButton from "@mui/material/IconButton";
+// @mui material components
+import Snackbar from "@mui/material/Snackbar";
+// Watch Selling App React components
 import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-
 // Custom styles for the MDSnackbar
 import MDSnackbarIconRoot from "components/MDSnackbar/MDSnackbarIconRoot";
-
-// Material Dashboard 2 React context
+import MDTypography from "components/MDTypography";
+// Watch Selling App React context
 import { useMaterialUIController } from "context";
+import PropTypes from "prop-types";
+
+
+
+
 
 function MDSnackbar({ color, icon, title, dateTime, content, close, bgWhite, ...rest }) {
   const [controller] = useMaterialUIController();

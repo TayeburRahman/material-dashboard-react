@@ -3,17 +3,17 @@ import Icon from "@mui/material/Icon";
 import Link from "@mui/material/Link";
 // @mui material components
 import List from "@mui/material/List";
-// Material Dashboard 2 React components
+// Watch Selling App React components
 import MDBox from "components/MDBox";
 import MDButton from "components/MDButton";
 import MDTypography from "components/MDTypography";
-// Material Dashboard 2 React context
+// Watch Selling App React context
 import {
-  setMiniSidenav,
-  setTransparentSidenav,
-  setWhiteSidenav, useMaterialUIController
+    setMiniSidenav,
+    setTransparentSidenav,
+    setWhiteSidenav, useMaterialUIController
 } from "context";
-// Material Dashboard 2 React example components
+// Watch Selling App React example components
 import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
 // Custom styles for the Sidenav
 import SidenavRoot from "examples/Sidenav/SidenavRoot";

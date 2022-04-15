@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 PRO React - v1.0.0
+* Watch Selling App PRO React - v1.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
@@ -15,7 +15,7 @@ Coded by www.creative-tim.com
 
 // Custom styles for MDButton
 import MDButtonRoot from "components/MDButton/MDButtonRoot";
-// Material Dashboard 2 React contexts
+// Watch Selling App React contexts
 import { useMaterialUIController } from "context";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";

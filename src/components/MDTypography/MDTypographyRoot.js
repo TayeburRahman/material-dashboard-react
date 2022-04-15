@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Watch Selling App React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-react
@@ -14,8 +14,8 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
+import Typography from "@mui/material/Typography";
 
 export default styled(Typography)(({ theme, ownerState }) => {
   const { palette, typography, functions } = theme;

@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Watch Selling App React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-react
@@ -14,19 +14,19 @@ Coded by www.creative-tim.com
 */
 
 // react-router components
-import { Link } from "react-router-dom";
-
-// prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
-
 // @mui material components
 import Card from "@mui/material/Card";
 import MuiLink from "@mui/material/Link";
-
-// Material Dashboard 2 React components
+// Watch Selling App React components
 import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
+import MDTypography from "components/MDTypography";
+// prop-types is a library for typechecking of props
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+
+
+
 
 function SimpleBlogCard({ image, title, description, action }) {
   return (

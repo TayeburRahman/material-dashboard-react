@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Watch Selling App React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-react
@@ -14,10 +14,10 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props
+// Watch Selling App React components
+import MDBox from "components/MDBox";
 import PropTypes from "prop-types";
 
-// Material Dashboard 2 React components
-import MDBox from "components/MDBox";
 
 function DataTableBodyCell({ noBorder, align, children }) {
   return (

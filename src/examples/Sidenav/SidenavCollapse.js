@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Watch Selling App React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-react
@@ -14,27 +14,24 @@ Coded by www.creative-tim.com
 */
 
 // prop-types is a library for typechecking of props.
-import PropTypes from "prop-types";
-
+import Icon from "@mui/material/Icon";
 // @mui material components
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import Icon from "@mui/material/Icon";
-
-// Material Dashboard 2 React components
+// Watch Selling App React components
 import MDBox from "components/MDBox";
-
+// Watch Selling App React context
+import { useMaterialUIController } from "context";
 // Custom styles for the SidenavCollapse
 import {
-  collapseItem,
-  collapseIconBox,
-  collapseIcon,
-  collapseText,
+    collapseIcon, collapseIconBox, collapseItem, collapseText
 } from "examples/Sidenav/styles/sidenavCollapse";
+import PropTypes from "prop-types";
 
-// Material Dashboard 2 React context
-import { useMaterialUIController } from "context";
+
+
+
 
 function SidenavCollapse({ icon, name, active, ...rest }) {
   const [controller] = useMaterialUIController();

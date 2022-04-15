@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Watch Selling App React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-react
@@ -16,7 +16,7 @@ Coded by www.creative-tim.com
 // @mui material components
 import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
-// Material Dashboard 2 React components
+// Watch Selling App React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import useAuth from "Firebase/Hooks/useAuth";

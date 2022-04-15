@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Watch Selling App React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-react
@@ -13,45 +13,41 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState, useEffect } from "react";
-
-// react-router components
-import { useLocation, Link } from "react-router-dom";
-
-// prop-types is a library for typechecking of props.
-import PropTypes from "prop-types";
-
 // @material-ui core components
 import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
+import Icon from "@mui/material/Icon";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
-import Icon from "@mui/material/Icon";
-
-// Material Dashboard 2 React components
+import Toolbar from "@mui/material/Toolbar";
+// Watch Selling App React components
 import MDBox from "components/MDBox";
 import MDInput from "components/MDInput";
-
-// Material Dashboard 2 React example components
+// Watch Selling App React context
+import {
+    setMiniSidenav,
+    setOpenConfigurator, setTransparentNavbar, useMaterialUIController
+} from "context";
+// Watch Selling App React example components
 import Breadcrumbs from "examples/Breadcrumbs";
 import NotificationItem from "examples/Items/NotificationItem";
-
 // Custom styles for DashboardNavbar
 import {
-  navbar,
-  navbarContainer,
-  navbarRow,
-  navbarIconButton,
-  navbarMobileMenu,
+    navbar,
+    navbarContainer, navbarIconButton,
+    navbarMobileMenu, navbarRow
 } from "examples/Navbars/DashboardNavbar/styles";
+// prop-types is a library for typechecking of props.
+import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
+// react-router components
+import { Link, useLocation } from "react-router-dom";
 
-// Material Dashboard 2 React context
-import {
-  useMaterialUIController,
-  setTransparentNavbar,
-  setMiniSidenav,
-  setOpenConfigurator,
-} from "context";
+
+
+
+
+
+
 
 function DashboardNavbar({ absolute, light, isMini }) {
   const [navbarType, setNavbarType] = useState();

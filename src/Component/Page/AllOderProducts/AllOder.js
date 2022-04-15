@@ -1,5 +1,4 @@
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
@@ -79,22 +78,13 @@ const AllOder = () => {
                 </TableCell>
 
                 <TableCell 
-                style={{color:'darkolivegreen',fontWeight:"600"}}
+                style={{color:'#43A047',fontWeight:"600"}}
                 >{product.price}</TableCell>
                 <TableCell 
-                style={{fontFamily:'monospace', color:'darkolivegreen'}}
+                style={{fontFamily:'monospace', color:'#1A73E8'}}
                 >{product.state}</TableCell>
-                <TableCell  
-                style={{fontFamily:'monospace'}}
-                >
-                  <Button
-                    onClick={() => handleDeleteOrders(product._id)}
-                    variant="outlined"
-                    color="error"
-                    style={{fontFamily:'system-ui',color:'red'}}
-                  >
-                    Delete
-                  </Button>
+                <TableCell style={{color:"#D81B60" ,fontWeight:"600"}}>
+                  {product.Size}
                 </TableCell>
               </TableRow>
             ))}

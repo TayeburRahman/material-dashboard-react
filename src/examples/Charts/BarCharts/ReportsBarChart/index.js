@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Watch Selling App React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-react
@@ -13,25 +13,25 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useMemo } from "react";
-
-// porp-types is a library for typechecking of props
-import PropTypes from "prop-types";
-
-// react-chartjs-2 components
-import { Bar } from "react-chartjs-2";
-
 // @mui material components
 import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider";
 import Icon from "@mui/material/Icon";
-
-// Material Dashboard 2 React components
+// Watch Selling App React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-
 // ReportsBarChart configurations
 import configs from "examples/Charts/BarCharts/ReportsBarChart/configs";
+// porp-types is a library for typechecking of props
+import PropTypes from "prop-types";
+import { useMemo } from "react";
+// react-chartjs-2 components
+import { Bar } from "react-chartjs-2";
+
+
+
+
+
 
 function ReportsBarChart({ color, title, description, date, chart }) {
   const { data, options } = configs(chart.labels || [], chart.datasets || {});

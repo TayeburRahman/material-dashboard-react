@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Watch Selling App React - v2.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-react
@@ -14,8 +14,8 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import { styled } from "@mui/material/styles";
 import LinearProgress from "@mui/material/LinearProgress";
+import { styled } from "@mui/material/styles";
 
 export default styled(LinearProgress)(({ theme, ownerState }) => {
   const { palette, functions } = theme;

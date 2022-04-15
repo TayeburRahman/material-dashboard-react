@@ -20,7 +20,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Tables",
+    name: "Order Manager (OMS)",
     key: "tables",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/tables",
@@ -28,7 +28,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Billing",
+    name: "Product Manager",
     key: "billing",
     icon: <Icon fontSize="small">receipt_long</Icon>,
     route: "/billing",

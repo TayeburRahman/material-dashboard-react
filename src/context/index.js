@@ -2,13 +2,13 @@
 import PropTypes from "prop-types";
 import { createContext, useContext, useMemo, useReducer } from "react";
 
-// Material Dashboard 2 React main context
+// Watch Selling App React main context
 const MaterialUI = createContext();
 
 // Setting custom name for the context which is visible on react dev tools
 MaterialUI.displayName = "MaterialUIContext";
 
-// Material Dashboard 2 React reducer
+// Watch Selling App React reducer
 function reducer(state, action) {
   switch (action.type) {
     case "MINI_SIDENAV": {
@@ -47,7 +47,7 @@ function reducer(state, action) {
   }
 }
 
-// Material Dashboard 2 React context provider
+// Watch Selling App React context provider
 function MaterialUIControllerProvider({ children }) {
   const initialState = {
     miniSidenav: false,
@@ -69,7 +69,7 @@ function MaterialUIControllerProvider({ children }) {
   return <MaterialUI.Provider value={value}>{children}</MaterialUI.Provider>;
 }
 
-// Material Dashboard 2 React custom hook for using context
+// Watch Selling App React custom hook for using context
 function useMaterialUIController() {
   const context = useContext(MaterialUI);
 
@@ -100,16 +100,17 @@ const setLayout = (dispatch, value) => dispatch({ type: "LAYOUT", value });
 const setDarkMode = (dispatch, value) => dispatch({ type: "DARKMODE", value });
 
 export {
-  MaterialUIControllerProvider,
-  useMaterialUIController,
-  setMiniSidenav,
-  setTransparentSidenav,
-  setWhiteSidenav,
-  setSidenavColor,
-  setTransparentNavbar,
-  setFixedNavbar,
-  setOpenConfigurator,
-  setDirection,
-  setLayout,
-  setDarkMode,
+    MaterialUIControllerProvider,
+    useMaterialUIController,
+    setMiniSidenav,
+    setTransparentSidenav,
+    setWhiteSidenav,
+    setSidenavColor,
+    setTransparentNavbar,
+    setFixedNavbar,
+    setOpenConfigurator,
+    setDirection,
+    setLayout,
+    setDarkMode,
 };
+

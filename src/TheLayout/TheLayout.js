@@ -6,19 +6,19 @@ import brandDark from "assets/images/logo-ct-dark.png";
 // Images
 import brandWhite from "assets/images/logo-ct.png";
 import theme from "assets/theme";
-// Material Dashboard 2 React Dark Mode themes
+// Watch Selling App React Dark Mode themes
 import themeDark from "assets/theme-dark";
-// Material Dashboard 2 React components
+// Watch Selling App React components
 import MDBox from "components/MDBox";
-// Material Dashboard 2 React contexts
+// Watch Selling App React contexts
 import { setMiniSidenav, setOpenConfigurator, useMaterialUIController } from "context";
 import Configurator from "examples/Configurator";
-// Material Dashboard 2 React example components
+// Watch Selling App React example components
 import Sidenav from "examples/Sidenav";
 import { useEffect, useState } from "react";
 // react-router components
 import { Navigate, Route, useLocation } from "react-router-dom";
-// Material Dashboard 2 React routes
+// Watch Selling App React routes
 import routes from "routes";
 
 
@@ -114,7 +114,7 @@ function TheLayout() {
             <Sidenav
               color={sidenavColor}
               brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-              brandName="Material Dashboard 2"
+              brandName="Watch Selling App"
               routes={routes}
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}
