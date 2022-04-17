@@ -34,6 +34,14 @@ const routes = [
     route: "/billing",
     component: <Billing />,
   }, 
+  // {
+  //   type: "collapse",
+  //   name: "Review",
+  //   key: "review",
+  //   icon: <Icon fontSize="small">notifications</Icon>,
+  //   route: "/review/notifications",
+  //   component: <AllProductReview />,
+  // },
   {
     type: "collapse",
     name: "Notifications",
@@ -58,6 +66,7 @@ const routes = [
     route: "/authentication/sign-in",
     component: <SignIn />,
   },
+ 
   {
     type: "collapse",
     name: "Sign Up",
@@ -66,6 +75,7 @@ const routes = [
     route: "/authentication/sign-up",
     component: <SignUp />,
   },
+  
 ];
 
 export default routes;

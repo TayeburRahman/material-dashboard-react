@@ -17,7 +17,6 @@ Coded by www.creative-tim.com
 // @mui material components
 import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider";
-import Icon from "@mui/material/Icon";
 // Watch Selling App React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
@@ -25,7 +24,7 @@ import PropTypes from "prop-types";
 
 
 
-function DefaultInfoCard({ color, icon, title, description, value }) {
+function DefaultInfoCard({ color, image, title, description, value }) {
   return (
     <Card>
       <MDBox p={2} mx={3} display="flex" justifyContent="center">
@@ -41,7 +40,7 @@ function DefaultInfoCard({ color, icon, title, description, value }) {
           borderRadius="lg"
           variant="gradient"
         >
-          <Icon fontSize="default">{icon}</Icon>
+           <img src={image} width="70%"  loading="lazy" style={{marginLeft:"9px"}} />
         </MDBox>
       </MDBox>
       <MDBox pb={2} px={2} textAlign="center" lineHeight={1.25}>

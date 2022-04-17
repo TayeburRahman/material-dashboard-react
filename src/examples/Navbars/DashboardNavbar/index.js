@@ -24,17 +24,17 @@ import MDBox from "components/MDBox";
 import MDInput from "components/MDInput";
 // Watch Selling App React context
 import {
-    setMiniSidenav,
-    setOpenConfigurator, setTransparentNavbar, useMaterialUIController
+  setMiniSidenav,
+  setOpenConfigurator, setTransparentNavbar, useMaterialUIController
 } from "context";
 // Watch Selling App React example components
 import Breadcrumbs from "examples/Breadcrumbs";
 import NotificationItem from "examples/Items/NotificationItem";
 // Custom styles for DashboardNavbar
 import {
-    navbar,
-    navbarContainer, navbarIconButton,
-    navbarMobileMenu, navbarRow
+  navbar,
+  navbarContainer, navbarIconButton,
+  navbarMobileMenu, navbarRow
 } from "examples/Navbars/DashboardNavbar/styles";
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";

@@ -1,0 +1,22 @@
+.modalAddProduct {
+  background-image: url("https://i.ibb.co/7Vmp7mS/istockphoto-470933383-170667a.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#transition-modal-title {
+  background-color: tomato;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.submit-from {
+  background-color: rgb(71, 151, 255);
+  border: 1px solid tomato;
+  color: white;
+}
+.submit-from:hover {
+  background-color: tomato;
+  border: 1px solid rgb(71, 145, 255);
+}

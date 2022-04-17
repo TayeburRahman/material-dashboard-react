@@ -170,7 +170,7 @@ export default function App() {
           <Route path="/aLLProduct" element={<ProductCalection/>} />
           <Route path="/aboutUs" element={<AboutUs/>} />  
           <Route path="/product/:productId" element={ <PrivateRoute><Spping/> </PrivateRoute>} /> 
-          <Route path="/manageAllOrders" element={<PrivateRoute><ManageAllOder/> </PrivateRoute>} />
+          <Route path="/manageAllOrders" element={<PrivateRoute><ManageAllOder/> </PrivateRoute>} /> 
          </Routes>
       )}
       </AuthProvider>

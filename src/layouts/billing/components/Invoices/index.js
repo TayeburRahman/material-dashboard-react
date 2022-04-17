@@ -19,7 +19,7 @@ import Card from "@mui/material/Card";
 import MDBox from "components/MDBox";
 import MDButton from "components/MDButton";
 import MDTypography from "components/MDTypography";
-// Billing page components
+// Billing  page components
 import Invoice from "layouts/billing/components/Invoice";
 
 

@@ -9,9 +9,9 @@ import MDButton from "components/MDButton";
 import MDTypography from "components/MDTypography";
 // Watch Selling App React context
 import {
-    setMiniSidenav,
-    setTransparentSidenav,
-    setWhiteSidenav, useMaterialUIController
+  setMiniSidenav,
+  setTransparentSidenav,
+  setWhiteSidenav, useMaterialUIController
 } from "context";
 // Watch Selling App React example components
 import SidenavCollapse from "examples/Sidenav/SidenavCollapse";

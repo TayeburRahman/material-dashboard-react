@@ -14,7 +14,7 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Invoices from "layouts/billing/components/Invoices";
 // Billing page components
-import PaymentMethod from "layouts/billing/components/PaymentMethod";
+import ProductMethod from "layouts/billing/components/ProductMethod";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
@@ -72,35 +72,34 @@ function Billing() {
               <Grid container spacing={3}>
               <Grid item xs={12} md={6} xl={3}>
                   <DefaultInfoCard
-                    icon="paypal"
-                    title="Watch"
-                    description="Freelance Payment" 
+                  image="https://i.ibb.co/tQ6kj1n/Temp-100x100-removebg-preview.png" 
+                    title="Digital Watch"
+                    description="Nothing beats the looks and practical nature of a digital watch." 
                   />
                 </Grid>
                 <Grid item xs={12} md={6} xl={3}>
                   <DefaultInfoCard
-                    icon="paypal"
-                    title="Haylou"
-                    description="Freelance Payment" 
+                  image="https://i.ibb.co/DYJ5Nfm/Temp-100x100-1-removebg-preview.png" 
+                    title="Analog Watch"
+                    description="Watches Men Analog · Titan 1802NL02 Neo Analog Watch for Men ·" 
                   />
                 </Grid>
                 <Grid item xs={12} md={6} xl={3}>
                   <DefaultInfoCard
-                    icon="account_balance"
-                    title="salary"
-                    description="Belong Interactive" 
+                  image="https://i.ibb.co/5M7GCFn/Temp-170x170.png" 
+                    title="Automatic Watch"
+                    description="An automatic watch, on the other hand, does it for you via a self-winding power reserve." 
                   />
                 </Grid>
                 <Grid item xs={12} md={6} xl={3}>
                   <DefaultInfoCard
-                    icon="paypal"
-                    title="paypal"
-                    description="Freelance Payment"
-                    // value="$455.00"
+                  image="https://i.ibb.co/T2cyRQV/Temp-100x100-4.png  " 
+                    title="Headphone"
+                    description="Earbud headphones are the most compact way to take in rich, premium sound." 
                   />
                 </Grid>
                 <Grid item xs={12}>
-                  <PaymentMethod />
+                  <ProductMethod />
                 </Grid>
               </Grid>
             </Grid>
