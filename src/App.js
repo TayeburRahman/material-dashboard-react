@@ -7,6 +7,7 @@ import brandDark from "assets/images/logo-ct-dark.png";
 import brandWhite from "assets/images/logo-ct.png";
 import theme from "assets/theme";
 import themeDark from "assets/theme-dark";
+import UserOrder from "Component/Page/ManageAllOder/UserOrder";
 import MDBox from "components/MDBox";
 import { setMiniSidenav, setOpenConfigurator, useMaterialUIController } from "context";
 import Configurator from "examples/Configurator";
@@ -164,14 +165,14 @@ export default function App() {
        <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/home" element={<Home/>} />
-          <Route path="/register" element={<Register/>} />
-          <Route path="/login" element={<Login/>} />
+          <Route path="/authentication/sign-up" element={<Register/>} />
+          <Route path="/authentication/sign-in" element={<Login/>} />
           <Route path="/products" element={<AllProduct/>} />
           <Route path="/aLLProduct" element={<ProductCalection/>} />
           <Route path="/aboutUs" element={<AboutUs/>} />  
           <Route path="/product/:productId" element={ <PrivateRoute><Spping/> </PrivateRoute>} /> 
           <Route path="/manageAllOrders" element={<PrivateRoute><ManageAllOder/> </PrivateRoute>} /> 
-         </Routes>
+          <Route path="/order/user" element={<PrivateRoute><UserOrder/> </PrivateRoute>} />          </Routes>
       )}
       </AuthProvider>
  

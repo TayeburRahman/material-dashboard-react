@@ -1,4 +1,4 @@
-import { Alert } from "@mui/material";
+import { Alert, Box, Container } from "@mui/material";
 import React, { useState } from "react";
 import img from "../../image/pngtree-users.jpg";
 import "./MakeAdmin.css";
@@ -29,13 +29,12 @@ const MakeAdmin = () => {
     e.preventDefault();
   };
   return (
-    <div className="imgBg">
-      <div>
-        <img src={img} width="20%" alt="" />
-        <h4 className="makeAdminText">Make a New Admin</h4>
-      </div>
-      <br />
-      <div>
+    <Box className="imgBg d-grid">
+      <Box className="d-grid" style={{justifyItems: 'center'}}>
+        <img src={img} width="30%" alt="" />
+        <h5 className="makeAdminText">Make a New Admin</h5>
+      </Box> 
+      <Container >
         <form onSubmit={handelSubmit}>
           <input
             type="email"
@@ -43,7 +42,7 @@ const MakeAdmin = () => {
             id="fname"
             name="email"
             onBlur={handelOnBlur}
-            placeholder="New Admin Email"
+            placeholder="Create Admin Email"
           />{" "}
           <br />
           <input type="submit" className="submit-button" value="Submit"></input>
@@ -54,8 +53,8 @@ const MakeAdmin = () => {
           </Alert>
         )}
          
-      </div>
-    </div>
+      </Container>
+    </Box>
   );
 };
 

@@ -16,7 +16,9 @@ import Invoices from "layouts/billing/components/Invoices";
 // Billing page components
 import ProductMethod from "layouts/billing/components/ProductMethod";
 import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import EditModal from "./EditModal";
 
 
 
@@ -27,13 +29,29 @@ function Billing() {
   const [isDelete, setIsDelete] = useState(false);
   const [controller] = useMaterialUIController();
   const { darkMode } = controller;
+  const [open, setOpen] = useState(false);
+  const [isPdData, setPdData] = useState(false);
+  const {reset, register, handleSubmit } = useForm(); 
 
+
+  
+    const handleOpen = (data) => { 
+        setPdData(data)
+        setOpen(true);
+
+    };
+    const handleClose = () => {
+        setOpen(false);
+        reset()
+    };
+
+    // ------------------------
    useEffect(() => {
     fetch("https://pacific-escarpment-27904.herokuapp.com/product")
       .then((res) => res.json())
       .then((data) => setAllProduct(data));
-  }, [isDelete]);
-
+     }, [open,isDelete,product]);
+    // ------------------------
   const handleDeleteOrders = (id) => {
       console.log(id)
     const url = `https://pacific-escarpment-27904.herokuapp.com/deleteProduct/${id}`;
@@ -139,7 +157,7 @@ function Billing() {
                            <Icon>delete</Icon>&nbsp;delete
                          </MDButton>
                        </MDBox>
-                       <MDButton variant="text" color={darkMode ? "white" : "dark"}>
+                       <MDButton onClick={()=> handleOpen(pd)} variant="text" color={darkMode ? "white" : "dark"}>
                          <Icon>edit</Icon>&nbsp;edit
                        </MDButton>
                      </MDBox>
@@ -181,6 +199,14 @@ function Billing() {
           </Grid>
         </MDBox>
       </MDBox>
+         <EditModal
+            reset={reset}
+             open={open}
+             handleClose={handleClose}
+             product={isPdData}
+             register={register}
+             handleSubmit={handleSubmit}
+         ></EditModal>
       <Footer />
     </DashboardLayout>
   );

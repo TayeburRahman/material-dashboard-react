@@ -87,7 +87,7 @@ const Login = () => {
               Google Sign In
             </Button>
             <br />
-            <NavLink style={{ textDecoration: "none" }} to="/register">
+            <NavLink style={{ textDecoration: "none" }} to="/authentication/sign-up">
               <Button
                 variant="text"
                 sx={{ fontFamily: "Monospace", fontWeight: 1000 }}

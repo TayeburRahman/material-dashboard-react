@@ -51,8 +51,8 @@ const Products = () => {
           </Grid>
         </div>
         <div className="d-flex row product-row" style={{justifyContent: "center"}}>
-          {product.map((pd) => (
-            <Card className="col-md-3 m-1 col-sm-12" sx={{ maxWidth: 345 }}>
+          {product.map((pd, idx) => (
+            <Card idx={idx} className="col-md-3 m-1 col-sm-12" sx={{ maxWidth: 345 }}>
               <CardMedia
                 component="img"
                 width="100%"

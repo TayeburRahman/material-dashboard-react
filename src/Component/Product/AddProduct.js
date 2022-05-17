@@ -1,7 +1,7 @@
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 import React from "react";
 import { useForm } from "react-hook-form";
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
 import "./Products.css";
 
 const AddProduct = () => {
@@ -21,8 +21,7 @@ const AddProduct = () => {
           alert("Your Order Successfully Send");
           reset();
         }
-      });
-    console.log(data);
+      }); 
   };
 
   return (

@@ -5,8 +5,8 @@ import ImageCard3 from './ImageCard3'
 
 function  ImagecardMain() {
     return (
-        <div className='hight row'>
-            <div className='col-md-6 hight-row col-lg-4 col-sm-12'>
+        <div className='homeSectionBg row'>
+            <div className='col-md-12 hight-row col-lg-4 col-sm-12'>
                 <ImageCard1></ImageCard1>
             </div>
             <div className='hight-row col-md-6 col-lg-4 col-sm-12'>

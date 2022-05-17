@@ -1,25 +1,62 @@
-import React from 'react'
+import { Button } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import React from 'react';
+import { Carousel } from 'react-bootstrap';
+import './ImageCard.css';
+
 
 function  ImageCard2() {
     return (
-  <div class="blog-card blog-card2  spring-fever">
-        <div class="title-content">
-        <h3><a href="#" >Haylou W1</a></h3>
+      <div className="containerts"> 
+      <Carousel >
+          <Carousel.Item >
+            <img
+              className="d-block w-100"
+              width="100%"
+              src="https://i.ibb.co/16Jf3Ff/resized-image-Promo-15.jpg"
+              alt="First slide"
+            />
+            <Carousel.Caption style={{background:'#00000047'}}>
+              <h3 className='sliderText'>Pair of Headphones</h3>
+              <Typography variant="caption" display="block" gutterBottom>
+                 Headphones are a pair of small loudspeaker drivers worn on or around the head over a user's ears. 
+              </Typography>
+             </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="https://i.ibb.co/qkj6TwL/resized-image-Promo-14.jpg"
+              alt="Second slide"
+            />
+        
+            <Carousel.Caption style={{background:'#00000047'}}>
+              <h3 className='sliderText'>Ear Headphones </h3> 
+              <Typography variant="caption" display="block" gutterBottom>
+              When the sound is too loud and played for a long time, the hearing cells in the ear can get damaged.               </Typography>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="https://i.ibb.co/QMvH4YP/resized-image-Promo-16.jpg"
+              alt="Third slide"
+            />
+        
+            <Carousel.Caption style={{background:'#00000047'}}>
+              <h3 className='sliderText'>Headphones and Headsets</h3> 
+              <Typography variant="caption" display="block" gutterBottom>
+              Explore our extensive range of over-ear headphones including Bluetooth & wireless headphones.</Typography>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>      
+        <div className="overlay d-grid" >
+         <Button variant="outlined" size="medium" style={{color:"#fa6e02",border:"1px solid orangered"}} >
+           View Modern Headphones
+         </Button>
         </div>
-        <div class="card-info">
-        <a href="#">Details view<span class="licon icon-arr icon-black"></span></a>
-  </div>
-  <div class="utility-info">
-    <ul class="utility-list">
-      <li><span class="licon icon-like"></span><a href="#">192</a></li>
-      <li><span class="licon icon-com"></span><a href="#">86</a></li>
-      <li><span class="licon icon-dat"></span>03 Jan 2022</li>
-      <li><span class="licon icon-tag"></span><a href="#">Photos</a>, <a href="#">Nice</a></li>
-    </ul>
-  </div>
-  <div class="gradient-overlay"></div>
-     <div class="color-overlay"></div>
-  </div> 
+      </div>
+   
     )
 }
 

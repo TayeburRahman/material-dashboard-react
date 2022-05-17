@@ -1,9 +1,10 @@
 .modalAddProduct {
-  background-image: url("https://i.ibb.co/7Vmp7mS/istockphoto-470933383-170667a.jpg");
   background-color: #cccccc;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: auto !important;
+}
+.modalAddProduct.MuiBox-root.css-1wnsr1i {
+  border: 2px solid indianred;
+  border-radius: 3px;
 }
 #transition-modal-title {
   background-color: tomato;
@@ -12,11 +13,16 @@
   padding: 10px;
 }
 .submit-from {
-  background-color: rgb(71, 151, 255);
-  border: 1px solid tomato;
+  background-color: rgb(90 145 254);
+  border: 1px solid rgb(71, 145, 255);
+
   color: white;
 }
 .submit-from:hover {
-  background-color: tomato;
-  border: 1px solid rgb(71, 145, 255);
+  background-color: rgb(69, 176, 209);
+  border: 1px solid rgb(125, 90, 254);
+}
+.AddInputPd {
+  width: 100% !important;
+  font-size: medium;
 }

@@ -49,11 +49,11 @@ const Header = () => {
                 <NavDropdown.Item as={HashLink} className="Dropdown" to="/dashboard" >
                 <h6>Dashboard</h6> 
                 </NavDropdown.Item>
-                <NavDropdown.Item as={HashLink} className="Dropdown" to="/dashboard/myOrders">
+                <NavDropdown.Item as={HashLink} className="Dropdown" to="/order/user">
                 <h6>Your Orders</h6>
                 </NavDropdown.Item>
                 {/* <NavDropdown.Divider /> */}
-                <NavDropdown.Item as={HashLink} className="Dropdown" to="/register">
+                <NavDropdown.Item as={HashLink} className="Dropdown" to="/authentication/sign-up">
                 <h6>Register Now</h6>
                 </NavDropdown.Item>
               </NavDropdown>
@@ -65,7 +65,7 @@ const Header = () => {
             <Nav>
                <div className="d-flex right-sec-heder">
                <div className="cart d-grid" style={{alignItems: 'center', height: '40px', width: '40px'}}>
-               <Link to="/dashboard/myOrders"> 
+               <Link to="/order/user"> 
               <ShoppingCartIcon style={{fontSize: '200%', color:'darkgoldenrod'}}/>
               <div className="cartIcons">{Products?.length}</div>
                </Link>
@@ -73,7 +73,6 @@ const Header = () => {
               {user?.email ? (
                 <Button onClick={logOut} variant="text">
                   <LogoutIcon  style={{fontSize: "200%",color: "darkgoldenrod", fontWeight:"700"}}/>
-                 
                 </Button>
               ) : (
                 <Button onClick={handleOpen} variant="text"

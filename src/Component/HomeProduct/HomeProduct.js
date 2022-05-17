@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import React, { useEffect, useState } from "react";
 import Rating from "react-rating";
 import { Link } from "react-router-dom";
+import './CardHome.css';
 
 const HomeProduct = () => {
   const [product, setProduct] = useState([]);
@@ -17,14 +18,14 @@ const HomeProduct = () => {
       .then((data) => setProduct(data));
   }, []);
   return (
-    <div className="bgColorProduct pt-3 pb-4" style={{background:'#eceee4'}}>
+    <div className="bgColorProduct pt-3 pb-4">
       <div className="d-flex row product-row m-4" style={{justifyContent: 'center'}}>
         <Typography sx={{ letterSpacing: 6,textAlign: "center" }}  className="text-danger mb-1 mt-4">THE LATEST</Typography>
         <Typography className="p-3" sx={{ fontWeight: "bold",textAlign: "center" }}>
           <h1>Fabulous Products</h1>
         </Typography>
-        {newProduct.map((pd) => (
-          <Card className="col-md-3 m-3 col-sm-12" sx={{ maxWidth: 345 }}>
+        {newProduct.map((pd,idx) => (
+          <Card key={idx} className="col-md-3 m-3 col-sm-12 boxShadowCard" sx={{ maxWidth: 345 }}>
             <CardMedia
               component="img"
               width="100%"
