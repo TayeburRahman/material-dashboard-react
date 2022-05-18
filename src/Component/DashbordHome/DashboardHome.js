@@ -6,7 +6,7 @@ import img from "../../image/featuredbannerimage.png";
 
 const DashboardHome = () => {
   return (
-    <div className="mt-5 pt-3 pb-5">
+    <div className="container mt-5 pt-3 pb-5">
       <Typography sx={{ letterSpacing: 6, textAlign: "center"}}  className="mb-1 mt-4" className="dashboardTColor" >THE PRODUCTS</Typography>
       <Typography className="p-3" sx={{ fontWeight: "bold", textAlign: "center"}}>
           <h1>Awesome Features</h1>

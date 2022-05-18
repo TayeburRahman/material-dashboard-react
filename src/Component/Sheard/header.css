@@ -92,6 +92,11 @@
 }
 .static-t {
   margin-top: 25px;
+  box-shadow: rgba(253, 255, 231, 0.104) 0px 10px 36px 0px,
+    rgba(94, 94, 94, 0.412) 0px 0px 0px 1px !important;
+}
+.colorRed :hover {
+  color: #ff2f00e8 !important;
 }
 @media only screen and (max-width: 991px) {
   .right-sec-heder {

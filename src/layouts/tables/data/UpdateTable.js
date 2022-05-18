@@ -22,14 +22,14 @@ export default function AllOderProduct() {
 
 
     React.useEffect(() => {
-      fetch("https://pacific-escarpment-27904.herokuapp.com/allOder")
+      fetch("https://shielded-island-32774.herokuapp.com/allOder")
         .then((res) => res.json())
         .then((data) => setOrders(data ));
     }, [ isUpdate,isDelete]);
 
 
     const handleDeleteOrders = (id) => {
-        const url = `https://pacific-escarpment-27904.herokuapp.com/userOder/${id}`;
+        const url = `https://shielded-island-32774.herokuapp.com/userOder/${id}`;
         Swal.fire({
           title: "Are you sure?",
           text: "You won't be able to revert this!",
@@ -59,7 +59,7 @@ export default function AllOderProduct() {
     const handleUpdateOrders = (id) => {
         console.log("id", id);
         id.state = "Approved";
-        const url = `https://pacific-escarpment-27904.herokuapp.com/updateOrder/${id._id}`;
+        const url = `https://shielded-island-32774.herokuapp.com/updateOrder/${id._id}`;
         fetch(url, {
           method: "PUT",
           headers: { "content-type": "application/json" },

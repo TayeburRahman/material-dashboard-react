@@ -35,7 +35,7 @@ const ReviewModel = ({ handleClose, open,oderProduct}) => {
     data.userImg = img;
     data.productName = oderProduct.name
     data.productUrl= oderProduct.url
-    fetch("https://pacific-escarpment-27904.herokuapp.com/review", {
+    fetch("https://shielded-island-32774.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

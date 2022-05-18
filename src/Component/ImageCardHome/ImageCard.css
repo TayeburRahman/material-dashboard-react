@@ -31,7 +31,12 @@
   width: 100%;
   left: 0;
 }
-.text-3 {
+.linkText {
+  text-decoration: none;
+}
+.alignItems {
+  align-items: normal !important;
+  justify-items: center !important;
 }
 .text {
   color: white;

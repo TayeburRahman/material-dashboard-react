@@ -8,8 +8,8 @@ import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <BrowserRouter>
-    <MaterialUIControllerProvider>
-      <App />
+    <MaterialUIControllerProvider>  
+        <App /> 
     </MaterialUIControllerProvider>
   </BrowserRouter>,
   document.getElementById("root")

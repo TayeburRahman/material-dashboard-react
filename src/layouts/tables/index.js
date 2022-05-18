@@ -23,21 +23,16 @@ import Footer from "examples/Footer";
 // Watch Selling App React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-// Data
-import authorsTableData from "layouts/tables/data/authorsTableData";
-import projectsTableData from "layouts/tables/data/projectsTableData";
 import AllOderProduct from "./data/UpdateTable";
  
 
 
 
-function Tables() {
-  const { columns, rows } = authorsTableData();
-  const { columns: pColumns, rows: pRows } = projectsTableData();
+function Tables() { 
 
   return (
     <DashboardLayout>
-      <DashboardNavbar />
+      <DashboardNavbar name="Order Manager (OMS)" />
       <MDBox pt={6} pb={3}>
         <Grid container spacing={6}>
           <Grid item xs={12}>

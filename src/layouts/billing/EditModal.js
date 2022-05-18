@@ -20,7 +20,8 @@ const style = {
 export default function EditModal({reset,register,handleSubmit,handleClose, product,open}) {
     
      const onSubmit = (data) => { 
-        fetch(`http://localhost:6001/updateProduct/${product._id}`, {
+         console.log(data)
+        fetch(`https://shielded-island-32774.herokuapp.com/updateProduct/${product._id}`, {
          method: "PUT",
          headers: {
            "content-type": "application/json",
@@ -32,10 +33,10 @@ export default function EditModal({reset,register,handleSubmit,handleClose, prod
            if (result) {
              alert("Product Update Successful");
              reset();
+             handleClose()
            }
          }); 
-    };
-    console.log(product);
+    }; 
     return (
         <div>
             <Modal 
@@ -123,7 +124,7 @@ export default function EditModal({reset,register,handleSubmit,handleClose, prod
                             Update Product
                         </button>
                         <button
-                        onClick={handleClose}
+                         onClick={handleClose}
                             style={{
                                 padding: '8px 14px',
                                 color: 'white',

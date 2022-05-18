@@ -18,24 +18,21 @@ import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
 // Custom styles for the Sidenav
 import SidenavRoot from "examples/Sidenav/SidenavRoot";
 import sidenavLogoLabel from "examples/Sidenav/styles/sidenav";
+import useAuth from "Firebase/Hooks/useAuth";
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 // react-router-dom components
 import { NavLink, useLocation } from "react-router-dom";
 
-
-
-
-
-
-
+ 
 
 function Sidenav({ color, brand, brandName, routes, ...rest }) {
   const [controller, dispatch] = useMaterialUIController();
   const { miniSidenav, transparentSidenav, whiteSidenav, darkMode, sidenavColor } = controller;
   const location = useLocation();
   const collapseName = location.pathname.replace("/", "");
+  const {logOut}= useAuth()
 
   let textColor = "white";
 
@@ -165,15 +162,16 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
       <List>{renderRoutes}</List>
       <MDBox p={2} mt="auto">
         <MDButton
+          className="hoverText"
           component="a"
-          href="https://www.creative-tim.com/product/material-dashboard-pro-react"
+          onClick={logOut}
           target="_blank"
           rel="noreferrer"
           variant="gradient"
           color={sidenavColor}
           fullWidth
         >
-          upgrade to pro
+        <Icon>logout</Icon> Log Out
         </MDButton>
       </MDBox>
     </SidenavRoot>

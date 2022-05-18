@@ -30,7 +30,7 @@ import { Link } from "react-router-dom";
 
 
 
-function DefaultProjectCard({ image, label, title, description, action, authors }) {
+function DefaultProjectCard({ image, price, title, name, action, authors,address,Size,route}) {
   const renderAuthors = authors.map(({ image: media, name }) => (
     <Tooltip key={name} title={name} placement="bottom">
       <MDAvatar
@@ -77,7 +77,7 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
       </MDBox>
       <MDBox mt={1} mx={0.5}>
         <MDTypography variant="button" fontWeight="regular" color="text" textTransform="capitalize">
-          {label}
+          {price}
         </MDTypography>
         <MDBox mb={1}>
           {action.type === "internal" ? (
@@ -102,35 +102,30 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
             </MDTypography>
           )}
         </MDBox>
-        <MDBox mb={3} lineHeight={0}>
-          <MDTypography variant="button" fontWeight="light" color="text">
-            {description}
-          </MDTypography>
+        <MDBox sx={{display:'grid'}} mb={3} lineHeight={0}> 
+        <MDTypography variant="button" fontWeight="regular" color="text" textTransform="capitalize">
+        Name: {name}
+        </MDTypography>
+        <MDTypography variant="button" fontWeight="regular" color="text" textTransform="capitalize">
+        Address: {address}
+        </MDTypography>
+        <MDTypography variant="button" fontWeight="regular" color="text" textTransform="capitalize">
+         Size: {Size}
+        </MDTypography>
         </MDBox>
         <MDBox display="flex" justifyContent="space-between" alignItems="center">
-          {action.type === "internal" ? (
-            <MDButton
-              component={Link}
-              to={action.route}
+        <Link to={`/product/${route?.productId}`}>
+           <MDButton 
+              to={route?.productId}
               variant="outlined"
               size="small"
-              color={action.color}
+              color={action?.color}
             >
               {action.label}
-            </MDButton>
-          ) : (
-            <MDButton
-              component="a"
-              href={action.route}
-              target="_blank"
-              rel="noreferrer"
-              variant="outlined"
-              size="small"
-              color={action.color}
-            >
-              {action.label}
-            </MDButton>
-          )}
+            </MDButton> 
+          </Link>
+             
+    
           <MDBox display="flex">{renderAuthors}</MDBox>
         </MDBox>
       </MDBox>

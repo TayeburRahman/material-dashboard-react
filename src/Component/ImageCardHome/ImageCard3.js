@@ -1,7 +1,9 @@
-import { Button, Typography } from '@mui/material'
-import React from 'react'
-import { Carousel } from 'react-bootstrap'
-import './ImageCard.css'
+import { Button, Typography } from '@mui/material';
+import React from 'react';
+import { Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './ImageCard.css';
+
 
 function ImageCard3() {
     return (
@@ -53,10 +55,12 @@ function ImageCard3() {
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>      
-            <div className="overlay d-grid">
-            <Button variant="outlined" size="medium" style={{color:"#fa6e02",border:"1px solid orangered"}} >
+            <div className="overlay d-flex" style={{alignItems: 'center',justifyContent: 'center'}}>
+            <Link className='linkText'  to="/aLLProduct">
+            <Button variant="outlined" size="medium" style={{padding:"20px",color:"#fa6e02",border:"1px solid orangered"}} >
               View Modern Headphones
             </Button>
+            </Link>
             </div> 
        </div>
     )

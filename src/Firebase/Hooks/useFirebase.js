@@ -1,5 +1,5 @@
 import {
-  createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile
+    createUserWithEmailAndPassword, getAuth, getIdToken, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeFirebase from "../FirebaseInit";
@@ -81,6 +81,8 @@ console.log(admin)
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
+        getIdToken(user)
+        .then((idToken) => localStorage.setItem('idToken', idToken))
         setUser(user);
       } else {
         setUser({});
@@ -106,7 +108,7 @@ console.log(admin)
   // save User to the database
   const saveUser = (email, displayName,phone,addres,method) => {
     const user = { email, displayName, addres, phone};
-    fetch("https://pacific-escarpment-27904.herokuapp.com/users", {
+    fetch("https://shielded-island-32774.herokuapp.com/users", {
       method: method,
       headers: {
         "content-type": "application/json",
@@ -116,7 +118,7 @@ console.log(admin)
   };
   
   useEffect(() =>{
-    fetch(`https://pacific-escarpment-27904.herokuapp.com/users/${user.email}`)
+    fetch(`https://shielded-island-32774.herokuapp.com/users/${user.email}`)
     .then(res => res.json())
     .then(data => setAdmin(data.admin))
   }, [user.email])

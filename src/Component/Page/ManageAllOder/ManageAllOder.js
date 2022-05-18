@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import Avatar from "@mui/material/Avatar";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
-import Button from "@mui/material/Button";
+import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
 const ManageAllOder = () => {
@@ -17,13 +17,13 @@ const ManageAllOder = () => {
   const [isDelete, setIsDelete] = useState(false);
   const [isUpdate, setIsUpdate] = useState(null);
   useEffect(() => {
-    fetch("https://pacific-escarpment-27904.herokuapp.com/allOder")
+    fetch("https://shielded-island-32774.herokuapp.com/allOder")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [isDelete, isUpdate]);
 
   const handleDeleteOrders = (id) => {
-    const url = `https://pacific-escarpment-27904.herokuapp.com/userOder/${id}`;
+    const url = `https://shielded-island-32774.herokuapp.com/userOder/${id}`;
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -53,7 +53,7 @@ const ManageAllOder = () => {
   const handleUpdateOrders = (id) => {
     console.log("id", id);
     id.state = "Approved";
-    const url = `https://pacific-escarpment-27904.herokuapp.com/updateOrder/${id._id}`;
+    const url = `https://shielded-island-32774.herokuapp.com/updateOrder/${id._id}`;
     fetch(url, {
       method: "PUT",
       headers: { "content-type": "application/json" },

@@ -24,7 +24,7 @@ export default function TransitionsModal({handleClose, open}) {
     const { reset, register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
-        fetch("https://pacific-escarpment-27904.herokuapp.com/addProducts", {
+        fetch("https://shielded-island-32774.herokuapp.com/addProducts", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -71,8 +71,7 @@ export default function TransitionsModal({handleClose, open}) {
                 placeholder="  Name*"
               />{" "} 
               <input
-                className="width mt-3"
-                required
+                className="width mt-3" 
                 type="number"
                 {...register("oldPrice")}
                 placeholder="  Old price*"
@@ -111,9 +110,8 @@ export default function TransitionsModal({handleClose, open}) {
                 placeholder="  Description*"
               />{" "} 
                <select {...register("category")} className='mt-1 mb-3'>
-                 <option value="digital Watch">  Digital Watch</option>
-                 <option value="analogWatch">Analog Watch</option>
-                 <option value="automaticWatch">Automatic Watch</option>
+                 <option value="digitalWatch">  Digital Watch</option>
+                 <option value="phoneCover">Phone Cover</option>
                  <option value="headphone">Headphone</option>
                </select> <br/>
               <input

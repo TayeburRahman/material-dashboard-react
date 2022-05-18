@@ -30,7 +30,7 @@ function OrdersOverview() {
   console.log('hhh',allReviews)
 
   useEffect(() => {
-      fetch('https://pacific-escarpment-27904.herokuapp.com/review')
+      fetch('https://shielded-island-32774.herokuapp.com/review')
         .then((res) => res.json())
         .then((data) => setReview(data));
     }, [isLoading]);

@@ -1,31 +1,12 @@
-/**
-=========================================================
-* Watch Selling App React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// prop-types is a library for typechecking of props.
+ 
 import Icon from "@mui/material/Icon";
-// @mui material components
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-// Watch Selling App React components
 import MDBox from "components/MDBox";
-// Watch Selling App React context
 import { useMaterialUIController } from "context";
-// Custom styles for the SidenavCollapse
 import {
-    collapseIcon, collapseIconBox, collapseItem, collapseText
+  collapseIcon, collapseIconBox, collapseItem, collapseText
 } from "examples/Sidenav/styles/sidenavCollapse";
 import PropTypes from "prop-types";
 

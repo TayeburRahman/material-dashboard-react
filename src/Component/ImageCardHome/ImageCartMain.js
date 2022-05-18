@@ -5,7 +5,8 @@ import ImageCard3 from './ImageCard3'
 
 function  ImagecardMain() {
     return (
-        <div className='homeSectionBg row'>
+         <div className='d-grid alignItems'>
+         <div className='homeSectionBg row' style={{maxWidth:"1600px",margin:"0"}}>
             <div className='col-md-12 hight-row col-lg-4 col-sm-12'>
                 <ImageCard1></ImageCard1>
             </div>
@@ -16,6 +17,7 @@ function  ImagecardMain() {
                 <ImageCard2></ImageCard2>
             </div>
         </div>
+         </div>
     )
 }
 

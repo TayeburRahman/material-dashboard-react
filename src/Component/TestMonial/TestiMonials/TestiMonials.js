@@ -9,11 +9,10 @@ import './TestiMonials.css';
 
 const TestiMonials = () => {
     const {isLoading} = useAuth();
-    const [allReviews, setReview] = useState([]);
-    console.log('hhh',allReviews)
+    const [allReviews, setReview] = useState([]); 
 
     useEffect(() => {
-        fetch('https://pacific-escarpment-27904.herokuapp.com/review')
+        fetch('https://shielded-island-32774.herokuapp.com/review')
           .then((res) => res.json())
           .then((data) => setReview(data));
       }, [isLoading]);
@@ -50,9 +49,11 @@ const TestiMonials = () => {
                 style={{margin: '0px 0px -50px 0px'}}
                 >
                     <Typography 
-            sx={{ letterSpacing: 8 }}  
-            style={{    paddingTop: "40px", paddingBottom: "15px"}}
-            className="mb-4 pb-4" className="text-danger" >USER REVIEW</Typography>
+                     sx={{ letterSpacing: 8 }}  
+                     style={{    paddingTop: "40px"}}
+                     className="" className="text-danger" >
+                         USER REVIEW
+                     </Typography>
                 </div>
                  <div className="row">
                     <div className="col-md-12">

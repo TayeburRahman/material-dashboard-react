@@ -7,6 +7,7 @@ import brandDark from "assets/images/logo-ct-dark.png";
 import brandWhite from "assets/images/logo-ct.png";
 import theme from "assets/theme";
 import themeDark from "assets/theme-dark";
+import UserProfile from "Component/Page/About/UserProfile/UserProfile";
 import UserOrder from "Component/Page/ManageAllOder/UserOrder";
 import MDBox from "components/MDBox";
 import { setMiniSidenav, setOpenConfigurator, useMaterialUIController } from "context";
@@ -139,6 +140,7 @@ export default function App() {
         <CssBaseline />
         {layout === "dashboard" && (
         <>
+        {/* <AdminRoute>  */}
            <PrivateRoute>
            <Sidenav
             color={sidenavColor}
@@ -156,6 +158,7 @@ export default function App() {
                 <Route path="/dashboard" element={<Navigate />} />
           </Routes>
            </PrivateRoute>
+           {/* </AdminRoute> */}
         </>
       )}
        </ThemeProvider>
@@ -172,7 +175,9 @@ export default function App() {
           <Route path="/aboutUs" element={<AboutUs/>} />  
           <Route path="/product/:productId" element={ <PrivateRoute><Spping/> </PrivateRoute>} /> 
           <Route path="/manageAllOrders" element={<PrivateRoute><ManageAllOder/> </PrivateRoute>} /> 
-          <Route path="/order/user" element={<PrivateRoute><UserOrder/> </PrivateRoute>} />          </Routes>
+          <Route path="/order/user" element={<PrivateRoute><UserOrder/> </PrivateRoute>} />       
+          <Route path="user.profile" element={<PrivateRoute><UserProfile/> </PrivateRoute>} />   
+       </Routes>
       )}
       </AuthProvider>
  

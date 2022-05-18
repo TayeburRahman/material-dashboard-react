@@ -47,14 +47,14 @@ function Billing() {
 
     // ------------------------
    useEffect(() => {
-    fetch("https://pacific-escarpment-27904.herokuapp.com/product")
+    fetch("https://shielded-island-32774.herokuapp.com/product")
       .then((res) => res.json())
       .then((data) => setAllProduct(data));
      }, [open,isDelete,product]);
     // ------------------------
   const handleDeleteOrders = (id) => {
       console.log(id)
-    const url = `https://pacific-escarpment-27904.herokuapp.com/deleteProduct/${id}`;
+    const url = `https://shielded-island-32774.herokuapp.com/deleteProduct/${id}`;
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -82,7 +82,7 @@ function Billing() {
   };
   return (
     <DashboardLayout>
-      <DashboardNavbar absolute isMini />
+      <DashboardNavbar name="Product Manager (PM)" absolute isMini />
       <MDBox mt={8}>
         <MDBox mb={3}>
           <Grid container spacing={3}>
@@ -128,7 +128,7 @@ function Billing() {
         </MDBox>
         <MDBox mb={3}>
           <Grid container spacing={3}> 
-            { product.map((pd,idx)=>(
+            { product?.map((pd,idx)=>(
                <Grid item xs={12} md={6} key={pd._id}>
                    <MDBox className="p-4" width="100%" display="flex" flexDirection="column" bgColor={darkMode ? "transparent" : "grey-100"}>
                     <Box> 

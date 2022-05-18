@@ -24,7 +24,7 @@ const ProductDTL = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch("https://pacific-escarpment-27904.herokuapp.com/product")
+    fetch("https://shielded-island-32774.herokuapp.com/product")
       .then((res) => res.json())
       .then((data) => setProduct(data.find((data) => data._id === productId)));
   }, [productId]);
@@ -36,18 +36,18 @@ const ProductDTL = () => {
     <>
       <div className="row text-left m-3 mt-5">
         <div className="col-md-6 col-sm-12">
-          <img src={product.img} width="100%" alt="" />
+          <img src={product?.img} width="100%" alt="" />
         </div>
         <div className="col-md-6 col-sm-12">
           <Typography variant="h4" className="mb-2" component="h4">
-            {product.name}
+            {product?.name}
           </Typography>
           <Typography variant="h5" className="mb-2" component="h4">
-            {product.updatePrice} $
+            {product?.updatePrice} $
           </Typography>
           <Rating
             className="Rating mb-3"
-            initialRating={product.rating}
+            initialRating={product?.rating}
             emptySymbol="fa fa-star-o fa-2x Rating"
             fullSymbol="fa fa-star fa-2x Rating"
             fractions={2}
@@ -58,10 +58,10 @@ const ProductDTL = () => {
             sx={{ fontFamily: "Monospace" }}
             component="p"
           >
-            Vendor : <span> product</span>
+            Vendor : <span> This Site</span>
           </Typography>
           <Typography variant="p" component="p">
-            Product Type : <span sx={{ fontFamily: "Monospace" }}> watch</span>
+            Product Type : <span sx={{ fontFamily: "Monospace" }}> {product.vendor}</span>
           </Typography>
           <div className="text-left mt-3">
             <h4>Size</h4>
@@ -160,7 +160,7 @@ const ProductDTL = () => {
       </div>
       <div className="text-left m-5  ">
         <h2>DESCRIPTION</h2>
-        <div className="  pt-2">{product.description}</div>
+        <div className="  pt-2">{product?.description}</div>
       </div>
       <OderPlaceModel
         product={product}

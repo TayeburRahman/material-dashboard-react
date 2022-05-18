@@ -11,13 +11,13 @@ const DashbordBGImg = () => {
 console.log('Products',Products);
 
   useEffect(() => {
-    fetch(`https://pacific-escarpment-27904.herokuapp.com/userOder/${email}`)
+    fetch(`https://shielded-island-32774.herokuapp.com/userOder/${email}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [user]);
 
   useEffect(() => {
-    fetch('https://pacific-escarpment-27904.herokuapp.com/users')
+    fetch('https://shielded-island-32774.herokuapp.com/users')
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, []);

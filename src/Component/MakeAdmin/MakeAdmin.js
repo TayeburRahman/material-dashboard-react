@@ -12,7 +12,7 @@ const MakeAdmin = () => {
   };
   const handelSubmit = (e) => {
     const user = { email };
-    fetch("https://pacific-escarpment-27904.herokuapp.com/users/admin", {
+    fetch("https://shielded-island-32774.herokuapp.com/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

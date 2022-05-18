@@ -9,7 +9,7 @@ import Tables from "layouts/tables";
 const routes = [
   {
     type: "collapse",
-    name: "Dashboard",
+    name: "dashboard",
     key: "dashboard",
     icon: <Icon fontSize="small">dashboard</Icon>,
     route: "/dashboard",
@@ -17,8 +17,8 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Order Manager (OMS)",
-    key: "tables",
+    name: "Order Manager",
+    key: "Order Manager",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/tables",
     component: <Tables />,

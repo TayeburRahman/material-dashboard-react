@@ -16,13 +16,14 @@ const style = {
   p: 4,
 };
 
-export default function OderPlaceModel({ open, handleClose, handleOpen, product,selectedvalue}) {
+export default function OderPlaceModel({ open, handleClose, product,selectedvalue}) {
   const { user } = useAuth();
   const email = user.email;
   const productName = product.name;
   const productUrl = product.img;
   const productPrice = product.updatePrice;
   const rating = product.rating;
+  const productId = product._id
 
   const {
     register,
@@ -37,8 +38,9 @@ export default function OderPlaceModel({ open, handleClose, handleOpen, product,
     data.price = productPrice;
     data.rating = rating;
     data.Size = selectedvalue;
+    data.productId= productId;
     data.state = "Pending..";
-    fetch("https://pacific-escarpment-27904.herokuapp.com/booking", {
+    fetch("https://shielded-island-32774.herokuapp.com/booking", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -58,7 +60,7 @@ export default function OderPlaceModel({ open, handleClose, handleOpen, product,
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <form className=" " onSubmit={handleSubmit(onSubmit)}>
+          <form className=" "onSubmit={handleSubmit(onSubmit)}>
             <h6>Your Name</h6>
             <input
               type="text"

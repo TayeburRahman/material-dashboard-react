@@ -12,9 +12,10 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { Box } from "@mui/system";
 import ReviewModel from "Component/Review/Review";
+import Footer from 'Component/Sheard/Footer';
 import ShortNav from "Component/Sheard/Navbar.short";
 import useAuth from "Firebase/Hooks/useAuth";
-import { default as React, useEffect, useState } from 'react';
+import { default as React, Fragment, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from "sweetalert2";
 import './Order.css';
@@ -32,7 +33,7 @@ function UserOrder() {
     const navigate = useNavigate();
   
     useEffect(() => {
-      fetch(`http://localhost:6001/userOder/${email}`,{
+      fetch(`https://shielded-island-32774.herokuapp.com/userOder/${email}`,{
         headers:{
           'authorization':`Bearer ${localStorage.getItem('idToken')}`
         }
@@ -50,7 +51,7 @@ function UserOrder() {
     }, [user,isDelete]);
 
     const handleDeleteOrders = (id) => {
-      const url = `https://pacific-escarpment-27904.herokuapp.com/userOder/${id}`;
+      const url = `https://shielded-island-32774.herokuapp.com/userOder/${id}`;
       Swal.fire({
         title: "Are you sure?",
         text: "You won't be able to revert this!",
@@ -78,14 +79,15 @@ function UserOrder() {
     };
     
     return (
-        <div className="d-grid">
+         <Fragment>
+           <div className="d-grid">
             <Box className="orderHeader d-flex">
                 <Box className=" col-md-9 col-sm-12 orderNav">
-                    <ShortNav></ShortNav>
+                    <ShortNav title="Orders"></ShortNav>
                 </Box>
             </Box>
-            <Container className="col-12">
-               <TableContainer className='mt-5' component={Paper}>
+            <Container className="col-12  mb-5">
+               <TableContainer className='mt-5 p-2' component={Paper}>
                  <Table sx={{ minWidth: 650 }} aria-label="simple table">
                    <TableHead>
                      <TableRow>
@@ -147,6 +149,8 @@ function UserOrder() {
               handleOpen={handleOpen}
             ></ReviewModel>
         </div>
+        <Footer></Footer>
+         </Fragment>
     )
 }
 

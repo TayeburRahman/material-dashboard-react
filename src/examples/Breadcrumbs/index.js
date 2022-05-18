@@ -1,20 +1,3 @@
-/**
-=========================================================
-* Watch Selling App React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// react-router-dom components
-// @mui material components
 import { Breadcrumbs as MuiBreadcrumbs } from "@mui/material";
 import Icon from "@mui/material/Icon";
 // Watch Selling App React components
@@ -27,7 +10,7 @@ import { Link } from "react-router-dom";
 
 
 
-function Breadcrumbs({ icon, title, route, light }) {
+function Breadcrumbs({ icon, title, route, light,name}) {
   const routes = route.slice(0, -1);
 
   return (
@@ -82,7 +65,7 @@ function Breadcrumbs({ icon, title, route, light }) {
         color={light ? "white" : "dark"}
         noWrap
       >
-        {title.replace("-", " ")}
+        {name}
       </MDTypography>
     </MDBox>
   );

@@ -7,14 +7,14 @@ const PrivateRoute = ({ children, ...rest }) => {
   const { user, isLoading } = useAuth();
   let location = useLocation();
   if (isLoading) {
-    return <CircularProgress color="success" />;
+    return <CircularProgress color="success" />
   }
 
   if (user.email) {
     return children;
 
   }
-  return  <Navigate to="/login" state={{ from: location }} />;
+  return  <Navigate to="/authentication/sign-in" state={{ from: location }} />;
 };
 
 export default PrivateRoute;

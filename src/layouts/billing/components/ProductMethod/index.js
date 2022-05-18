@@ -23,13 +23,13 @@ function PaymentMethod() {
   const [orders, setOrders] = useState([{}]); 
 
   useEffect(() => {
-    fetch("https://pacific-escarpment-27904.herokuapp.com/product")
+    fetch("https://shielded-island-32774.herokuapp.com/product")
       .then((res) => res.json())
       .then((data) => setAllProduct(data));
   }, []);
 
   useEffect(() => {
-    fetch("https://pacific-escarpment-27904.herokuapp.com/allOder")
+    fetch("https://shielded-island-32774.herokuapp.com/allOder")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
