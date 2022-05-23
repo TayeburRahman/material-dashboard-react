@@ -17,13 +17,13 @@ const ManageAllOder = () => {
   const [isDelete, setIsDelete] = useState(false);
   const [isUpdate, setIsUpdate] = useState(null);
   useEffect(() => {
-    fetch("https://shielded-island-32774.herokuapp.com/allOder")
+    fetch("https://sleepy-journey-86126.herokuapp.com/allOder")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [isDelete, isUpdate]);
 
   const handleDeleteOrders = (id) => {
-    const url = `https://shielded-island-32774.herokuapp.com/userOder/${id}`;
+    const url = `https://sleepy-journey-86126.herokuapp.com/userOder/${id}`;
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -53,7 +53,7 @@ const ManageAllOder = () => {
   const handleUpdateOrders = (id) => {
     console.log("id", id);
     id.state = "Approved";
-    const url = `https://shielded-island-32774.herokuapp.com/updateOrder/${id._id}`;
+    const url = `https://sleepy-journey-86126.herokuapp.com/updateOrder/${id._id}`;
     fetch(url, {
       method: "PUT",
       headers: { "content-type": "application/json" },

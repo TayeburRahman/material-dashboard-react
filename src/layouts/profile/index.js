@@ -28,7 +28,7 @@ import { useEffect, useState } from "react";
 function Overview() {
   const [orders, setOrders] = useState([{}]); 
   useEffect(() => {
-    fetch("https://shielded-island-32774.herokuapp.com/allOder")
+    fetch("https://sleepy-journey-86126.herokuapp.com/allOder")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [orders]);

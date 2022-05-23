@@ -24,7 +24,7 @@ const ProductDTL = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch("https://shielded-island-32774.herokuapp.com/product")
+    fetch("https://sleepy-journey-86126.herokuapp.com/product")
       .then((res) => res.json())
       .then((data) => setProduct(data.find((data) => data._id === productId)));
   }, [productId]);
@@ -43,7 +43,7 @@ const ProductDTL = () => {
             {product?.name}
           </Typography>
           <Typography variant="h5" className="mb-2" component="h4">
-            {product?.updatePrice} $
+            {product?.updatePrice} € 
           </Typography>
           <Rating
             className="Rating mb-3"

@@ -98,6 +98,10 @@
 .colorRed :hover {
   color: #ff2f00e8 !important;
 }
+
+#imageFooter {
+  filter: brightness(100.5);
+}
 @media only screen and (max-width: 991px) {
   .right-sec-heder {
     justify-content: center;

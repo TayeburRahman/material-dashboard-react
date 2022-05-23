@@ -8,7 +8,7 @@ const AddProduct = () => {
   const { reset, register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    fetch("https://shielded-island-32774.herokuapp.com/addProducts", {
+    fetch("https://sleepy-journey-86126.herokuapp.com/addProducts", {
       method: "POST",
       headers: {
         "content-type": "application/json",

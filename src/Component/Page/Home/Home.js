@@ -7,7 +7,7 @@ import HomeProduct from '../../HomeProduct/HomeProduct';
 import ImageCardMain from '../../ImageCardHome/ImageCartMain';
 import CustomHeader from '../../Sheard/Costomheader';
 import Footer from '../../Sheard/Footer';
-import TestiMonials from '../../TestMonial/TestiMonials/TestiMonials';
+import HomeShowReview from '../../TestMonial/TestiMonials/TestiMonials';
  
 const Home = () => {
      return (
@@ -19,10 +19,30 @@ const Home = () => {
              <HomeProduct></HomeProduct> 
              <DashboardHome></DashboardHome>
              <Sponsors></Sponsors>
-             <TestiMonials></TestiMonials>
+             <HomeShowReview></HomeShowReview>
              <Footer></Footer>
         </div>
     );
 };
 
 export default Home;
+
+
+
+
+
+// import React, { useEffect, useState } from 'react';
+// import Slider from 'react-slick';
+// import useAuth from '../../../Firebase/Hooks/useAuth';
+// import './TestiMonials.css';
+
+// const TestiMonials = () => {
+//     const {isLoading} = useAuth();
+//     const [Feedbacks, setFeedbacks] = useState([]); 
+//     console.log(Feedbacks)
+
+//     useEffect(() => {
+//         fetch('https://sleepy-journey-86126.herokuapp.com/review')
+//           .then((res) => res.json())
+//           .then((data) => setFeedbacks(data));
+//       }, [isLoading]);

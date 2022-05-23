@@ -6,6 +6,7 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import useAuth from "../../Firebase/Hooks/useAuth";
+import logo from '../../image/logo.png';
 import LoginModal from "../UserLogin/LoginModal";
 import './header.css';
 
@@ -15,10 +16,11 @@ const Header = () => {
   const handleOpen = () => setOpen(true);
   const { user, logOut } = useAuth();
   const [Products, setProduct] = useState([{}]); 
+ 
   
     useEffect(() => {
       if(user){
-        fetch(`https://shielded-island-32774.herokuapp.com/userOder/${user?.email}`,{
+        fetch(`https://sleepy-journey-86126.herokuapp.com/userOder/${user?.email}`,{
           headers:{
             'authorization':`Bearer ${localStorage.getItem('idToken')}`
           }
@@ -37,7 +39,7 @@ const Header = () => {
       <Navbar collapseOnSelect expand="lg" className="bg-colors mt-1" variant="dark">
         <Container className='ps-3 pe-3' style={{background:"white"}}>
           <Navbar.Brand href="#home" className="text-color-tag">
-          <img className='ms-3 me-5' src="https://i.ibb.co/1qnx6CT/5f951214a8fbff372b7bbc2b55f86e39-removebg-preview-1.png" width={85} alt="BigCo Inc. logo"/>
+          <img className='ms-3 me-5' src={logo} width={85} alt="BigCo Inc. logo"/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{background: "dimgray"}} />
           <Navbar.Collapse id="responsive-navbar-nav " className="mt-2">

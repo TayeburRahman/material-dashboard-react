@@ -91,7 +91,7 @@ const Register = () => {
             />
             <br />
             <TextField
-              sx={{ width: "50%" }}
+              sx={{ width: "50%",m: 1 }}
               id="standard-password-input"
               label="Password"
               type="password"
@@ -102,7 +102,7 @@ const Register = () => {
             />{" "}
             <br />
             <TextField
-              sx={{ width: "50%" }}
+              sx={{ width: "50%",m: 1 }}
               id="standard-password-input"
               label="ReType Password"
               type="password"
@@ -113,12 +113,12 @@ const Register = () => {
             />{" "}
             <br />
             <br />
-            <Button type="submit" sx={{ width: "50%" }} variant="contained">
+            <Button type="submit" sx={{ width: "50%",m: 1 }} variant="contained">
               Submit
             </Button>
           </form>
           <br />
-          <NavLink style={{ textDecoration: "none" }} to="/login">
+          <NavLink style={{ textDecoration: "none" }} to="/authentication/sign-in">
             <Button variant="text"   sx={{ fontFamily: "Monospace", fontWeight: 1000 }}>Already Have an Account? Please LOGIN</Button>
           </NavLink>
         </Grid>

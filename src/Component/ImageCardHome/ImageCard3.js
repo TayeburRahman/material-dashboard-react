@@ -15,7 +15,7 @@ function ImageCard3() {
                 <img
                   className="d-block w-100"
                   width="100%"
-                  src="https://i.ibb.co/16Jf3Ff/resized-image-Promo-15.jpg"
+                  src="https://i.ibb.co/CJCShrf/Temp-1000x600-1.png"
                   alt="First slide"
                 />
                 <Carousel.Caption style={{background:'#00000047'}}>
@@ -28,7 +28,7 @@ function ImageCard3() {
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src="https://i.ibb.co/qkj6TwL/resized-image-Promo-14.jpg"
+                  src="https://i.ibb.co/YN9HfmC/Temp-1000x600-2.png"
                   alt="Second slide"
                 />
             
@@ -43,7 +43,7 @@ function ImageCard3() {
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src="https://i.ibb.co/QMvH4YP/resized-image-Promo-16.jpg"
+                  src="https://i.ibb.co/Jz7K2v5/Temp-1000x600.png"
                   alt="Third slide"
                 />
             
@@ -57,8 +57,8 @@ function ImageCard3() {
             </Carousel>      
             <div className="overlay d-flex" style={{alignItems: 'center',justifyContent: 'center'}}>
             <Link className='linkText'  to="/aLLProduct">
-            <Button variant="outlined" size="medium" style={{padding:"20px",color:"#fa6e02",border:"1px solid orangered"}} >
-              View Modern Headphones
+            <Button variant="outlined" size="medium" style={{padding:"20px",color:"rgb(184 204 15)",border:"1px solid red"}} >
+              View SMART WATCH
             </Button>
             </Link>
             </div> 

@@ -1,21 +1,24 @@
-import { Typography } from '@mui/material';
+import { Rating, Typography } from '@mui/material';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import React, { useEffect, useState } from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import useAuth from '../../../Firebase/Hooks/useAuth';
-import TestiMonialsDetails from '../TestiMonialsDetails/TestiMonialsDetails';
 import './TestiMonials.css';
 
 const TestiMonials = () => {
-    const {isLoading} = useAuth();
-    const [allReviews, setReview] = useState([]); 
+    const { user} = useAuth();
+    const [allReviews, setReview] = useState([]);   
+    const reviews= allReviews.length
+
 
     useEffect(() => {
-        fetch('https://shielded-island-32774.herokuapp.com/review')
+        fetch('https://sleepy-journey-86126.herokuapp.com/review')
           .then((res) => res.json())
-          .then((data) => setReview(data));
-      }, [isLoading]);
+          .then((data) => { 
+                setReview(data) 
+          });
+      }, [reviews]);
 
     //Owl Carousel Settings
     const options = {
@@ -25,7 +28,7 @@ const TestiMonials = () => {
         margin: 0,
         autoplay: true,
         dots: true,
-        autoplayTimeout: 8500,
+        autoplayTimeout: 5500,
         smartSpeed: 450,
         nav: false,
         responsive: {
@@ -33,7 +36,7 @@ const TestiMonials = () => {
                 items: 1
             },
             600: {
-                items: 3
+                items: 2
             },
             1000: {
                 items: 3
@@ -41,8 +44,8 @@ const TestiMonials = () => {
         }
     };
     return (
-        <section id="testimonial" className="testimonials pt-70 pb-70">
-            <div className="container mt-5"
+        <section id="testimonial" className="testimonials ">
+            <div className="container"
             style={{ marginTop: '-46px'}}
             >
                 <div className="text-center"
@@ -50,21 +53,40 @@ const TestiMonials = () => {
                 >
                     <Typography 
                      sx={{ letterSpacing: 8 }}  
-                     style={{    paddingTop: "40px"}}
+                     style={{ paddingTop: "40px"}}
                      className="" className="text-danger" >
                          USER REVIEW
                      </Typography>
+                     <Typography className="p-3" sx={{ fontWeight: "bold",textAlign: "center" }}>
+                       <h1>  Feedback From Our Members </h1>
+                     </Typography>
+                   
+                     <Typography
+                    align="center"
+                    variant="body1"
+                    component="div"
+                    gutterBottom
+                >
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    <br />
+                    Expedita officia nulla fuga error. Enim illum animi
+                    molestiae minus illo! Placeat, laborum.
+                </Typography>
                 </div>
                  <div className="row">
                     <div className="col-md-12">
                         <OwlCarousel id="customer-testimonoals" className="owl-carousel owl-theme" {...options}>
                             {
-                                    allReviews?.map((reviews) => {
-                                        return (
-                                            <TestiMonialsDetails key={reviews?._key}  testiMonialDetail={reviews}/>
-
-                                        )
-                                    })
+                               allReviews.map((reviews, idx) => ( 
+                                       <div key={idx} className="item">
+                                          <div className="shadow-effect">
+                                              <img className="img-circle" src={reviews?.productUrl} />
+                                              <h5>{reviews?.userName}</h5> 
+                                              <Rating name="read-only" value={reviews?.rating} readOnly />
+                                              <p>{reviews?.description}</p>
+                                           </div> 
+                                       </div>
+                                     ))
                             }
                         </OwlCarousel>
                     </div>

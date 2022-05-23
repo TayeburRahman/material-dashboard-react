@@ -56,7 +56,7 @@ function  ImageCard1() {
             </Carousel>      
             <div className="overlay d-flex" style={{alignItems: 'center',justifyContent: 'center'}}>
             <Link className='linkText' to="/aLLProduct">
-            <Button variant="outlined" size="medium" style={{padding:"20px",color:"#fa6e02",border:"1px solid orangered"}} >
+            <Button variant="outlined" size="medium" style={{padding:"20px",color:"rgb(184 204 15)",border:"1px solid red"}} >
               View Modern Headphones
             </Button>
             </Link>

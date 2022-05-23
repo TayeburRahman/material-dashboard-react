@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Rating from "@mui/material/Rating";
 import Typography from "@mui/material/Typography";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import useAuth from "../../Firebase/Hooks/useAuth";
 
@@ -23,19 +23,21 @@ const style = {
 const ReviewModel = ({ handleClose, open,oderProduct}) => {
   const { user } = useAuth();
   const { reset, register, handleSubmit } = useForm();
-  const [value, setValue] = React.useState(2);
-
+  const [value, setValue] = useState(null);
+  console.log('value', value)
+ 
 
   const name = user.displayName;
-  const img = user.photoURL;
-  console.log(user);
+  const img = user.photoURL; 
 
   const onSubmit = (data) => {
+    console.log('photoURL',data )
     data.userName = name;
     data.userImg = img;
     data.productName = oderProduct.name
     data.productUrl= oderProduct.url
-    fetch("https://shielded-island-32774.herokuapp.com/review", {
+    data.rating= value;
+    fetch("https://sleepy-journey-86126.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -83,7 +85,7 @@ const ReviewModel = ({ handleClose, open,oderProduct}) => {
                 name="simple-controlled"
                 value={value}
                 onChange={(event, newValue) => {
-                  setValue(newValue);
+                  setValue(newValue)
                 }}
               />
             </Box>
@@ -92,7 +94,7 @@ const ReviewModel = ({ handleClose, open,oderProduct}) => {
               type="text"
               {...register("rating")}
               value={value}
-              placeholder={value}
+              placeholder={value} 
             />{" "}
             <br /> <br />
             <textarea

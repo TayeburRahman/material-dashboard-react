@@ -47,14 +47,14 @@ function Billing() {
 
     // ------------------------
    useEffect(() => {
-    fetch("https://shielded-island-32774.herokuapp.com/product")
+    fetch("https://sleepy-journey-86126.herokuapp.com/product")
       .then((res) => res.json())
       .then((data) => setAllProduct(data));
      }, [open,isDelete,product]);
     // ------------------------
   const handleDeleteOrders = (id) => {
       console.log(id)
-    const url = `https://shielded-island-32774.herokuapp.com/deleteProduct/${id}`;
+    const url = `https://sleepy-journey-86126.herokuapp.com/deleteProduct/${id}`;
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",

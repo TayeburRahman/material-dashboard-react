@@ -5,13 +5,14 @@ import './sponsors.css';
 const Sponsors = () => {
     return (
         <div className="sponsors">
-             <Typography sx={{ letterSpacing: 6, textAlign: "center"}}  className="mb-1 mt-4" className="dashboardTColor" >THE PRODUCTS</Typography>
-            <p>
-                Nest is an MIT-licensed open-source project. Hence, it grows
-                thanks to the sponsors <br /> and support by the amazing
-                backers. Please, consider supporting us!
-            </p>
-            <h3>PRINCIPAL SPONSORS</h3>
+            <div className="text-center"
+            style={{margin: '0px 0px -50px 0px'}}
+            >
+                 
+                 <Typography className="p-3 pb-5" sx={{ fontWeight: "bold",textAlign: "center",fontSize:"40px",marginTop:"-30px" }}>
+                   Principal Sponsors 
+                 </Typography> 
+            </div>  
             <div className="content">
                 <img
                     src="https://d33wubrfki0l68.cloudfront.net/554b0594b9de16144c7d6117c61e00d2012d61f5/a3eea/trilon.1777374a.svg"
@@ -32,13 +33,9 @@ const Sponsors = () => {
                 />
             </div>
             <div className="content">
-                <img
-                    src="https://d33wubrfki0l68.cloudfront.net/cd485f5ce0e8d48d44eb56f32cf23ba5a9cf540f/57aeb/nx-logo.0c7a375e.png"
-                    alt=""
-                />
+                 
             </div>
-             
-            <h3>SILVER SPONSORS</h3>
+              
             <div className="content">
                 <img
                     src="https://d33wubrfki0l68.cloudfront.net/bd4eda7a82c10d92f86ca8fca57c87674c1e5d61/a4c0e/neoteric.cdfd3ccd.png"
@@ -57,8 +54,7 @@ const Sponsors = () => {
                     src="https://d33wubrfki0l68.cloudfront.net/e60a60be58b203ac22ffe41e528c504db97cfb82/9f278/tinystacks-logo.058eddaf.png"
                     alt=""
                 />
-            </div>
-            <h3>SPONSORS / PARTNERS</h3>
+            </div> 
             <div className="content">
                 <img
                     src="https://d33wubrfki0l68.cloudfront.net/11cfe3dfb6130e4ed5808f7c32cfe44c3ba9dfb0/8dbc6/genuinebee.85622ca7.svg"

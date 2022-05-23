@@ -21,7 +21,7 @@ export default function EditModal({reset,register,handleSubmit,handleClose, prod
     
      const onSubmit = (data) => { 
          console.log(data)
-        fetch(`https://shielded-island-32774.herokuapp.com/updateProduct/${product._id}`, {
+        fetch(`https://sleepy-journey-86126.herokuapp.com/updateProduct/${product._id}`, {
          method: "PUT",
          headers: {
            "content-type": "application/json",

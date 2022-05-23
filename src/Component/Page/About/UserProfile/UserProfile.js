@@ -1,5 +1,6 @@
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { Container, Link, Typography } from "@mui/material";
 import { Box } from "@mui/system";
@@ -11,6 +12,7 @@ import { Carousel } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import ProfileCard from "./Profile.card";
 
+
 function UserProfile() {
     const {user}= useAuth() 
 
@@ -18,7 +20,7 @@ function UserProfile() {
     const navigate = useNavigate();
 
      useEffect(() => {
-        fetch(`https://shielded-island-32774.herokuapp.com/userOder/${user?.email}`,{
+        fetch(`https://sleepy-journey-86126.herokuapp.com/userOder/${user?.email}`,{
           headers:{
             'authorization':`Bearer ${localStorage.getItem('idToken')}`
           }
@@ -122,24 +124,42 @@ function UserProfile() {
                  </Box>
             </Box>
             <hr></hr>
-            <Box>
-                <Box>
-                <Typography variant="h5" className="css-17pt5qvt" gutterBottom  style={{fontWeight:700}}>
-                Total Orders Items: {oderProduct.length} 
-              </Typography>  
+            {
+              oderProduct.length ? 
+              <Box>
+              <Box>
+                 <Typography variant="h5" className="css-17pt5qvt" gutterBottom  style={{fontWeight:700}}>
+                  Total Orders Items: {oderProduct.length} 
+                 </Typography>  
+              </Box>
+              <Box className="row">
+                  {
+                      oderProduct.map((product, dex)=>(
+                          <Box key={dex} className="col-md-4 col-sm-6 col-lg-3">
+                          <ProfileCard product={product}></ProfileCard>
+                          </Box>
+                      ))
+                  }
+                   
+              </Box> 
+              </Box>
+              :
+              <Container className='boxOrders d-grid'> 
+                <Box className="d-flex">
+                <ShoppingCartIcon/>
+                  <Typography variant="h6" component="div">
+                   No Orders 
+                 </Typography> 
                 </Box>
-                <Box className="row">
-                    {
-                        oderProduct.map((product, dex)=>(
-                            <Box key={dex} className="col-md-4 col-sm-6 col-lg-3">
-                            <ProfileCard product={product}></ProfileCard>
-                            </Box>
-                        ))
-                    }
-                     
-                </Box>
-
-            </Box>
+                <Typography variant="subtitle2" gutterBottom>
+                    {user.displayName}
+                 </Typography>
+               <Typography variant="caption" display="block" gutterBottom>
+                  You haven't submitted any cards for grading yet.
+                  Click the button below to get started.
+               </Typography>
+               </Container> 
+            } 
            
          </Container>
         

@@ -20,7 +20,7 @@ function Projects() {
   const [menu, setMenu] = useState(null);
   const [Products, setProduct] = useState([{}]);
   useEffect(() => {
-    fetch("https://shielded-island-32774.herokuapp.com/allOder")
+    fetch("https://sleepy-journey-86126.herokuapp.com/allOder")
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);

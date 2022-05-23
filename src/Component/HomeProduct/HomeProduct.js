@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
@@ -17,7 +16,7 @@ const HomeProduct = () => {
  
 
   useEffect(() => {
-    fetch("https://shielded-island-32774.herokuapp.com/product")
+    fetch("https://sleepy-journey-86126.herokuapp.com/product")
       .then((res) => res.json())
       .then((data) => setAllProduct(data));
   }, []);  
@@ -58,17 +57,16 @@ const HomeProduct = () => {
               {pd.name}
             </Typography>
             <div className="d-flex product-row">
-              <p class="text-decoration-line-through">{pd.oldPrice}</p>
-              <p class="ms-3 me-3">{pd.updatePrice}</p>
+              <p class="text-decoration-line-through">{pd?.oldPrice} {pd.oldPrice?'€' : ''}</p>
+              <p class="ms-3 me-3">{pd.updatePrice} €</p>
             </div>
             <Link to={`/product/${pd._id}`} style={{textDecoration: 'none'}}>
-              <Button variant="contained" className=" mb-4">
-                Shop Now{" "}
-                <span className="ms-2">
+             <button class="button-87" role="button"> Shop Now
+               <span className="ms-2">
                   {" "}
                   <i class="fas fa-shopping-cart"></i>
                 </span>
-              </Button>
+              </button>
             </Link>
           </Card>
            </Box>
@@ -79,8 +77,8 @@ const HomeProduct = () => {
           <h5 className="text-left"> Accessories/ Phone/ Cover</h5>
          </Typography>
 
-        {isAllProduct.filter(product => product.category === "phoneCover").slice(0, 4).map((pd,idx) => (
-           <Box className="col-lg-3 col-md-3 col-sm-12" sx={{ padding: 0 }}>
+        {isAllProduct.filter(product => product.category === "phoneCover").slice(0, 6).map((pd,idx) => (
+           <Box className="col-lg-2 col-md-2 col-sm-6" sx={{ padding: 0 }}>
              <Card key={idx} className="boxShadowCard m-1 ps-4 pe-4" sx={{ maxWidth: 345}}>
             <CardMedia
             className="productCardImage"
@@ -105,17 +103,16 @@ const HomeProduct = () => {
               {pd.name}
             </Typography>
             <div className="d-flex product-row">
-              <p class="text-decoration-line-through">{pd.oldPrice}</p>
-              <p class="ms-3 me-3">{pd.updatePrice}</p>
+              <p class="text-decoration-line-through">{pd.oldPrice} {pd.oldPrice?'€' : ''}</p>
+              <p class="ms-3 me-3">{pd.updatePrice} €</p>
             </div>
             <Link to={`/product/${pd._id}`} style={{textDecoration: 'none'}}>
-              <Button variant="contained" className=" mb-4">
-                Shop Now{" "}
-                <span className="ms-2">
+              <button class="button-87" role="button"> Shop Now
+               <span className="ms-2">
                   {" "}
                   <i class="fas fa-shopping-cart"></i>
                 </span>
-              </Button>
+              </button>
             </Link>
           </Card>
            </Box>
@@ -126,8 +123,8 @@ const HomeProduct = () => {
          <Typography className="mt-4 mb-1" sx={{ fontWeight: "bold",textAlign: "center" }}>
           <h5 className="text-left"> Accessories/ Headphone/ Logitech</h5>
          </Typography>
-        {isAllProduct.filter(product => product.category === "headphone").slice(0, 4).map((pd,idx) => (
-           <Box className="col-lg-3 col-md-3 col-sm-12" sx={{ padding: 0 }}>
+        {isAllProduct.filter(product => product.category === "headphone").slice(0, 6).map((pd,idx) => (
+           <Box className="col-lg-2 col-md-2 col-sm-6" sx={{ padding: 0 }}>
              <Card key={idx} className="boxShadowCard m-1 ps-4 pe-4" sx={{ maxWidth: 345}}>
             <CardMedia
             className="productCardImage"
@@ -152,17 +149,16 @@ const HomeProduct = () => {
               {pd.name}
             </Typography>
             <div className="d-flex product-row">
-              <p class="text-decoration-line-through">{pd.oldPrice}</p>
-              <p class="ms-3 me-3">{pd.updatePrice}</p>
+              <p class="text-decoration-line-through">{pd.oldPrice} {pd.oldPrice?'€' : ''}</p>
+              <p class="ms-3 me-3">{pd.updatePrice} €</p>
             </div>
-            <Link to={`/product/${pd._id}`} style={{textDecoration: 'none'}}>
-              <Button variant="contained" className=" mb-4">
-                Shop Now{" "}
-                <span className="ms-2">
+            <Link to={`/product/${pd._id}`} style={{textDecoration: 'none'}}> 
+              <button class="button-87" role="button"> Shop Now
+              <span className="ms-2">
                   {" "}
                   <i class="fas fa-shopping-cart"></i>
                 </span>
-              </Button>
+              </button>
             </Link>
           </Card>
            </Box>

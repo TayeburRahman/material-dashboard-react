@@ -30,7 +30,7 @@ function OrdersOverview() {
   console.log('hhh',allReviews)
 
   useEffect(() => {
-      fetch('https://shielded-island-32774.herokuapp.com/review')
+      fetch('https://sleepy-journey-86126.herokuapp.com/review')
         .then((res) => res.json())
         .then((data) => setReview(data));
     }, [isLoading]);

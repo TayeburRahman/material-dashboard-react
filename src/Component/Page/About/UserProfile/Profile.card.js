@@ -28,7 +28,7 @@ export default function ProfileCard({product}) {
            <span style={{fontWeight:700}}>Size:</span> {product?.Size}
         </Typography> 
         <Typography variant="body1" color="text.secondary">
-           <span style={{fontWeight:700}}>Price:</span> {product?.price}
+           <span style={{fontWeight:700}}>Price:</span> {product?.price} €
         </Typography>
         <Typography variant="body1" color="text.secondary">
            <span style={{fontWeight:700}}>State:</span> {product?.state}

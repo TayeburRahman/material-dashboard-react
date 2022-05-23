@@ -108,7 +108,7 @@ console.log(admin)
   // save User to the database
   const saveUser = (email, displayName,phone,addres,method) => {
     const user = { email, displayName, addres, phone};
-    fetch("https://shielded-island-32774.herokuapp.com/users", {
+    fetch("https://sleepy-journey-86126.herokuapp.com/users", {
       method: method,
       headers: {
         "content-type": "application/json",
@@ -118,7 +118,7 @@ console.log(admin)
   };
   
   useEffect(() =>{
-    fetch(`https://shielded-island-32774.herokuapp.com/users/${user.email}`)
+    fetch(`https://sleepy-journey-86126.herokuapp.com/users/${user.email}`)
     .then(res => res.json())
     .then(data => setAdmin(data.admin))
   }, [user.email])

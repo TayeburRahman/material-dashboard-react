@@ -40,7 +40,7 @@ export default function OderPlaceModel({ open, handleClose, product,selectedvalu
     data.Size = selectedvalue;
     data.productId= productId;
     data.state = "Pending..";
-    fetch("https://shielded-island-32774.herokuapp.com/booking", {
+    fetch("https://sleepy-journey-86126.herokuapp.com/booking", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

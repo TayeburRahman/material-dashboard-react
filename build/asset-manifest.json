@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.d308f367.css",
-    "main.js": "/static/js/main.2b145110.js",
+    "main.css": "/static/css/main.8d038a1f.css",
+    "main.js": "/static/js/main.e86eaf9a.js",
     "static/media/faqbackground.png": "/static/media/faqbackground.2199f2005548dc887f81.png",
     "static/media/watch1.png": "/static/media/watch1.2dd9fd7d51708bf44c2e.png",
     "static/media/bg-profile.jpeg": "/static/media/bg-profile.af1219a742e09fc7b612.jpeg",
     "static/media/banner1.png": "/static/media/banner1.7db1a33dbab74958bcc0.png",
+    "static/media/logo.png": "/static/media/logo.e769b5e919088c482b93.png",
     "static/media/featuredbannerimage.png": "/static/media/featuredbannerimage.673a4e6a80813d3eedd0.png",
     "static/media/aboutus.png": "/static/media/aboutus.44cca72bf9d8947d4c0c.png",
     "static/media/C1.png": "/static/media/C1.77866d118bff74653e31.png",
+    "static/media/visaCard.png": "/static/media/visaCard.a58ef200c8ef79745947.png",
     "static/media/team-1.jpg": "/static/media/team-1.0fd36e0ee93dcfacdef8.jpg",
     "static/media/bruce-mars.jpg": "/static/media/bruce-mars.8a606c4a6dab54c9ceff.jpg",
     "static/media/marie.jpg": "/static/media/marie.c28f32663b6432b46f78.jpg",
@@ -25,11 +27,11 @@
     "static/media/logo-jira.svg": "/static/media/logo-jira.c19fd4e416babfbd0fdb0a794188c601.svg",
     "index.html": "/index.html",
     "static/media/logo-atlassian.svg": "/static/media/logo-atlassian.f2b0e8570a4b4ce768854ff3dad1a6e1.svg",
-    "main.d308f367.css.map": "/static/css/main.d308f367.css.map",
-    "main.2b145110.js.map": "/static/js/main.2b145110.js.map"
+    "main.8d038a1f.css.map": "/static/css/main.8d038a1f.css.map",
+    "main.e86eaf9a.js.map": "/static/js/main.e86eaf9a.js.map"
   },
   "entrypoints": [
-    "static/css/main.d308f367.css",
-    "static/js/main.2b145110.js"
+    "static/css/main.8d038a1f.css",
+    "static/js/main.e86eaf9a.js"
   ]
 }
